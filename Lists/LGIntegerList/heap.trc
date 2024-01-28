@@ -1,0 +1,140 @@
+C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe 
+Heap dump by heaptrc unit of C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe
+119 memory blocks allocated : 6547/6856
+119 memory blocks freed     : 6547/6856
+0 unfreed memory blocks : 0
+True heap size : 393216 (192 used in System startup)
+True free heap : 393024
+C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe 
+Heap dump by heaptrc unit of C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe
+119 memory blocks allocated : 6547/6856
+117 memory blocks freed     : 6451/6760
+2 unfreed memory blocks : 96
+True heap size : 425984 (192 used in System startup)
+True free heap : 425280
+Should be : 425312
+Call trace for block $0000000001570F30 size 48
+  $0000000100021502
+  $000000010001DEBC
+  $000000010001257E  CREATE,  line 256 of dynbuffer.inc
+  $0000000100012662  CREATE,  line 264 of dynbuffer.inc
+  $0000000100015B17  main,  line 22 of LGIntegerList.lpr
+  $0000000100015DC6
+  $0000000100026980
+  $0000000100001820
+  $00007FFDCE22257D
+  $00007FFDCFAAAA58
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+Call trace for block $0000000001570E30 size 48
+  $0000000100021502
+  $000000010001E67A
+  $000000010001261E
+  $0000000100015B17  main,  line 22 of LGIntegerList.lpr
+  $0000000100015DC6
+  $0000000100026980
+  $0000000100001820
+  $00007FFDCE22257D
+  $00007FFDCFAAAA58
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe 
+Heap dump by heaptrc unit of C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe
+119 memory blocks allocated : 6547/6856
+119 memory blocks freed     : 6547/6856
+0 unfreed memory blocks : 0
+True heap size : 393216 (192 used in System startup)
+True free heap : 393024
+C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe 
+Heap dump by heaptrc unit of C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe
+119 memory blocks allocated : 6547/6856
+117 memory blocks freed     : 6451/6760
+2 unfreed memory blocks : 96
+True heap size : 425984 (192 used in System startup)
+True free heap : 425280
+Should be : 425312
+Call trace for block $0000000001570F30 size 48
+  $0000000100021502
+  $000000010001DEBC
+  $000000010001257E  CREATE,  line 256 of dynbuffer.inc
+  $0000000100012662  CREATE,  line 264 of dynbuffer.inc
+  $0000000100015B17  main,  line 22 of LGIntegerList.lpr
+  $0000000100015DC6
+  $0000000100026980
+  $0000000100001820
+  $00007FFDCE22257D
+  $00007FFDCFAAAA58
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+Call trace for block $0000000001570E30 size 48
+  $0000000100021502
+  $000000010001E67A
+  $000000010001261E
+  $0000000100015B17  main,  line 22 of LGIntegerList.lpr
+  $0000000100015DC6
+  $0000000100026980
+  $0000000100001820
+  $00007FFDCE22257D
+  $00007FFDCFAAAA58
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe 
+Heap dump by heaptrc unit of C:\Users\iwank\Documents\fp-projects\basic\LGIntegerList\LGIntegerList.exe
+119 memory blocks allocated : 6547/6856
+117 memory blocks freed     : 6451/6760
+2 unfreed memory blocks : 96
+True heap size : 425984 (192 used in System startup)
+True free heap : 425280
+Should be : 425312
+Call trace for block $0000000001500F30 size 48
+  $0000000100021502
+  $000000010001DEBC
+  $000000010001257E  CREATE,  line 256 of dynbuffer.inc
+  $0000000100012662  CREATE,  line 264 of dynbuffer.inc
+  $0000000100015B17  main,  line 22 of LGIntegerList.lpr
+  $0000000100015DC6
+  $0000000100026980
+  $0000000100001820
+  $00007FFDCE22257D
+  $00007FFDCFAAAA58
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+Call trace for block $0000000001500E30 size 48
+  $0000000100021502
+  $000000010001E67A
+  $000000010001261E
+  $0000000100015B17  main,  line 22 of LGIntegerList.lpr
+  $0000000100015DC6
+  $0000000100026980
+  $0000000100001820
+  $00007FFDCE22257D
+  $00007FFDCFAAAA58
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
+  $BAADF00DBAADF00D
