@@ -134,7 +134,7 @@ No installation needed. Just download or `git clone` the repo to your local driv
 ### Using your favourite text editor
 
 1. Navigate to an example folder.
-2. Open the `.lpr` file. This is the program source code.l
+2. Open the `.lpr` file. This is the program source code.
 
 ## License
 
