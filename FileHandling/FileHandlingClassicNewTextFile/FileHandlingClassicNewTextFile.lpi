@@ -10,7 +10,7 @@
         <MainUnitHasScaledStatement Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="ReadTextFile"/>
+      <Title Value="FileHandlingClassicNewTextFile"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -26,11 +26,7 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="ReadTextFile.lpr"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cupcake-ipsum.txt"/>
+        <Filename Value="FileHandlingClassicNewTextFile.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -39,17 +35,12 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="ReadTextFile"/>
+      <Filename Value="FileHandlingClassicNewTextFile"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <Linking>
-      <Debugging>
-        <DebugInfoType Value="dsDwarf2Set"/>
-      </Debugging>
-    </Linking>
   </CompilerOptions>
   <Debugging>
     <Exceptions>

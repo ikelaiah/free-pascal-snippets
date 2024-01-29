@@ -23,97 +23,81 @@
 
 ## Contents
 
-```
-Root
-│
-├───CodeStructure
-│   ├───ProgramStructure
-│   │   
-│   ├───SimpleProgram
-│   │   
-│   ├───UnitStructure
-│   │   
-│   └───SimpleProgramWithUnit
-│       
-├───CommandLineArguments
-│   ├───GetOptSimple
-│   │   
-│   └───Simple
-│       
-├───DateTime
-│   ├───Dates
-│   │   
-│   ├───DateTimeBenchmark
-│   │   
-│   ├───DateTimeBetween
-│   │   
-│   ├───DateTimeComparison
-│   │   
-│   ├───DateTimeCurrent
-│   │   
-│   ├───DateTimeUnix
-│   │   
-│   └───ParseDate
-│       
-├───FileHandling
-│   ├───FileHandlingClassicCreateBlankTextFile
-│   │   
-│   ├───FileHandlingTFileStreamCreateBlankTextFile
-│   │   
-│   ├───FileHandlingTFileStreamNewTextFile
-│   │   
-│   ├───FileHandlingTFileStreamTextFileOrganised
-│   │   
-│   ├───ReadTextFile
-│   │   
-│   ├───TStreadReaderReadFileTidy
-│   │   
-│   └───TStreamReaderReadFile
-│       
-├───FuncProc
-│   ├───ParamModifierConst
-│   │   
-│   └───ParamModifierVar
-│       
-├───Immutability
-│   
-├───Lists
-│   ├───AppendFPGList
-│   │   
-│   ├───DynamicArray
-│   │   
-│   ├───FGLIntegerList
-│   │   
-│   ├───LGIntegerList
-│   │   
-│   ├───LGIntegerListSort
-│   │   
-│   ├───LGIntegerListSortCmpRel
-│   │   
-│   ├───SimpleIntegerList
-│   │   
-│   ├───StaticArray
-│   │   
-│   ├───StringList
-│   │   
-│   └───TListCustomComparison
-│       
-├───Numbers
-│   ├───RandomNumberBetween
-│   │   
-│   ├───RandomNumberSimple
-│   │   
-│   ├───RandomRealNumberBetween
-│   │   
-│   ├───RandomRealNumberList
-│   │   
-│   └───RandomRealNumberListv2
-│       
-└───Regex
-    ├───ReplaceDateSeparators
-    │   
-    └───Simple
-```
+### Code Structure
+
+All about structuring Pascal source files.
+
+- **ProgramStructure**. Structure of a Pascal program.
+- **SimpleProgram**. An example of a Pascal program.
+- **UnitStructure**. Structure of a Unit file.
+- **SimpleProgramWithUnit**. An example of creating and using a unit file.
+
+ ### Command Line Arguments
+
+All about parsing command line arguments and options.
+
+- **CLSimple**. Parsing arguments using `ParamStr` and `ParamCount`.
+- **GetOptSimple**. An example of using `GetOpt` to parse command line flags.
+
+### Date Time
+
+- **DateTimeBenchmark**. A simple way to profile your program.
+- **DateTimeBetween**. Finding time difference between two timestamps.
+- **DateTimeComparison**. Comparing date times.
+- **DateTimeCurrent**. Getting the current date time.
+- **DateTimeUnix**.  Getting date time in unix notation.
+- **ParseDate**.  A simple example of parsing a string into a `TDateTime` object using `ScanDateTime`.
+
+
+### File Handling
+
+All about file handling; reading and writing.
+
+- **FileHandlingClassicNewTextFile**. Create a new text file the classical way.
+- **FileHandlingClassicNewTextFileOrganised**. Create a new text file the classical way but more organised.
+- **FileHandlingTFileStreamNewTextFile**. Create a text file the object way.
+- **FileHandlingTFileStreamNewTextFileOrganised**. Create a text file the object way but more organised.
+- **FileHandlingClassicCreateBlankTextFile**. The classical way of creating a blank file.
+- **FileHandlingTFileStreamCreateBlankTextFile**. The object way of creating a blank file.
+- **TStreamReaderReadFile**. Read a text file using `TStreamReader`.
+- **TStreadReaderReadFileTidy**. Read a text file using `TStreamReader` but more tidy.
+
+### FuncProc
+
+- **ParamModifierConst**. Ensuring function arguments won't be changed in a function or procedure.
+- **ParamModifierVar**. Moifying named parameters from a function or procedure.
+
+
+### Immutability
+
+Ensuring `const` behaving like `const` in other programing languages.
+
+
+### Lists
+
+- **StaticArray**. Building and processing static arrays.
+- **DynamicArray**. Building and processing dynamic arrays.
+- **StringList**. Create a list of string.
+- **SimpleIntegerList**. Create a list of integer using `Generics.Collections` unit and sort it.
+- **TListCustomComparison**. Crete a custom comparer for a `TList<T>` list.
+- **FGLIntegerList**. Create a list of integer using `fgl` unit and sort it.
+- **AppendFPGList**. Append two `TFPGList<integer>` lists.
+- **LGIntegerList**. Create a list of integer using `TGVector<T>` from `LGenerics` unit.
+- **LGIntegerListSort**. Sort a `TGVector<integer>` list.
+
+### Numbers
+
+- **RandomNumberSimple**. Generate a random number, simplest way.
+- **RandomNumberBetween**. Generate a random integer number between two numbers.
+- **RandomRealNumberBetween**. Generate a random real number between two numbers.
+- **RandomRealNumberList**. Create a list of random number using LGenerics.
+- **RandomRealNumberListv2**. Create a list of random number using a dynamic array.
+
+
+### Regex
+    
+- **RegexSimpleExample**. A simple pattern matching using regex.     
+- **ReplaceDateSeparators**. An example of replacing date separators using regex.
 
 ## Getting Started
 

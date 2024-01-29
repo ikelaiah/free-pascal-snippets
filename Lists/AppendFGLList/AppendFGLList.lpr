@@ -1,4 +1,4 @@
-program AppendFPGList;
+program AppendFGLList;
 
 {$mode objfpc}{$H+}
 

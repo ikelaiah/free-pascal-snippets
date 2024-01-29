@@ -10,7 +10,7 @@
         <MainUnitHasScaledStatement Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="ReadTextFile"/>
+      <Title Value="CLSimple"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -26,11 +26,7 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="ReadTextFile.lpr"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cupcake-ipsum.txt"/>
+        <Filename Value="CLSimple.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -39,7 +35,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="ReadTextFile"/>
+      <Filename Value="CLSimple"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
