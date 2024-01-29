@@ -12,3 +12,4 @@ fp.cfg
 fp.dsk
 backup/*
 lib/*
+*.bak
