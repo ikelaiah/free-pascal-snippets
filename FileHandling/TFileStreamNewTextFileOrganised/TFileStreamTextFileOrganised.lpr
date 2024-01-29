@@ -1,4 +1,4 @@
-program FileHandlingTFileStreamTextFileOrganised;
+program TFileStreamTextFileOrganised;
 
 uses
   Classes, SysUtils;

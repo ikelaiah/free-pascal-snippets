@@ -1,4 +1,4 @@
-program FileHandlingObjectCreateBlankTextFile;
+program TFileStreamCreateBlankTextFile;
 
 uses
   Classes, SysUtils;
@@ -13,6 +13,8 @@ begin
   try
     // Create a new file without writing anyting into it
     fileStream := TFileStream.Create(fileName, fmCreate);
+
+    // Show a confirmation
     Writeln('Created a blank file: ', fileName);
   finally
     // Free resources

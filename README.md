@@ -9,7 +9,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Free Pascal Recipes</h3>
+<h3 align="center">Free Pascal Snippets</h3>
 
   <p align="center">
     This repository contains Free Pascal code snippets that I've put together while learning Object Pascal using Lazarus IDE and the Free Pascal Compiler (FPC).
@@ -53,12 +53,12 @@ All about parsing command line arguments and options.
 
 All about file handling; reading and writing.
 
-- **FileHandlingClassicNewTextFile**. Create a new text file the classical way.
-- **FileHandlingClassicNewTextFileOrganised**. Create a new text file the classical way but more organised.
-- **FileHandlingTFileStreamNewTextFile**. Create a text file the object way.
-- **FileHandlingTFileStreamNewTextFileOrganised**. Create a text file the object way but more organised.
-- **FileHandlingClassicCreateBlankTextFile**. The classical way of creating a blank file.
-- **FileHandlingTFileStreamCreateBlankTextFile**. The object way of creating a blank file.
+- **ClassicNewTextFile**. Create a new text file the classical way.
+- **ClassicNewTextFileOrganised**. Create a new text file the classical way but more organised.
+- **TFileStreamNewTextFile**. Create a text file the object way.
+- **TFileStreamNewTextFileOrganised**. Create a text file the object way but more organised.
+- **ClassicCreateBlankTextFile**. The classical way of creating a blank file.
+- **TFileStreamCreateBlankTextFile**. The object way of creating a blank file.
 - **TStreamReaderReadFile**. Read a text file using `TStreamReader`.
 - **TStreadReaderReadFileTidy**. Read a text file using `TStreamReader` but more tidy.
 

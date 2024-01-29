@@ -1,29 +1,27 @@
-program FileHandlingClassicNewTextFile;
-
-{$mode objfpc}{$H+}
+program ClassicCreateBlankTextFile;
 
 uses
+  Classes,
   SysUtils;
 
 var
+  filename: string = 'hello-text.txt';
   textFile: System.TextFile;
 
 begin
   // Set the name of the file that will be created
-  AssignFile(textFile, 'output_file.txt');
+  AssignFile(textFile, filename);
 
   // Enclose in try/except block to handle errors
   try
     // Open the file for writing (it will create it file doesn't exist)
     ReWrite(textFile);
 
-    // Adding text
-    WriteLn(textFile, 'This is a new line');
-
     // Close file
     CloseFile(textFile);
 
-    WriteLn('Created a new file');
+    // Show a confirmation
+    WriteLn('Created a new blank file');
 
   except
     // Catch error here

@@ -1,10 +1,10 @@
-program FileHandlingObjectNewTextFile;
+program TFileStreamNewTextFile;
 
 uses
   Classes, SysUtils;
 
 var
-  text: string = 'QILT Survey';
+  text: string = 'QILT Surveys';
   filename :String = 'hello-text.txt';
   fileStream: TFileStream;
   size: longint;

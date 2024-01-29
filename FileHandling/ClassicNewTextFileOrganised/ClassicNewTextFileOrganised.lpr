@@ -1,4 +1,4 @@
-program FileHandlingClassicNewTextFileOrganised;
+program ClassicNewTextFileOrganised;
 
 {$mode objfpc}{$H+}
 
