@@ -75,6 +75,8 @@ Ensuring `const` behaving like `const` in other programing languages.
 
 ### Lists
 
+All about building lists in Free Pascal.
+
 - **StaticArray**. Building and processing static arrays.
 - **DynamicArray**. Building and processing dynamic arrays.
 - **StringList**. Create a list of string.
@@ -87,6 +89,8 @@ Ensuring `const` behaving like `const` in other programing languages.
 
 ### Numbers
 
+All things about numbers.
+
 - **RandomNumberSimple**. Generate a random number, simplest way.
 - **RandomNumberBetween**. Generate a random integer number between two numbers.
 - **RandomRealNumberBetween**. Generate a random real number between two numbers.
@@ -95,9 +99,14 @@ Ensuring `const` behaving like `const` in other programing languages.
 
 
 ### Regex
-    
+
+Examples on using regex expressions.
+
 - **RegexSimpleExample**. A simple pattern matching using regex.     
 - **ReplaceDateSeparators**. An example of replacing date separators using regex.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -107,18 +116,25 @@ Install both the [Free Pascal Compiler (FPC)](https://www.freepascal.org) and [L
 
 You can find the latest installer here; [https://github.com/LongDirtyAnimAlf/fpcupdeluxe/releases](https://github.com/LongDirtyAnimAlf/fpcupdeluxe/releases).
 
+
 ### Installation
 
 No installation needed. Just download or `git clone` the repo to your local drive.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## Usage
+
+### Using Lazarus IDE
 
 1. Launch your Lazarus IDE.
 2. Top bar menu, go to `Projects` - `Open Project ...`. 
 3. Navigate to the snippet folder you'd like to see, and open the `.lpi` file.
+
+### Using your favourite text editor
+
+1. Navigate to an example folder.
+2. Open the `.lpr` file. This is the program source code.l
 
 ## License
 
