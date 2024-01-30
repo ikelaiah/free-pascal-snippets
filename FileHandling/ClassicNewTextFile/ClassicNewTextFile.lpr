@@ -1,18 +1,17 @@
-program ClassicNewTextFileOrganised;
+program ClassicNewTextFile;
 
 {$mode objfpc}{$H+}
 
 uses
   SysUtils;
 
-  // Write or append a text to a file
-  procedure WriteTextToFile(fileName: string; stringText: string);
-  var
-    textFile: System.TextFile;
-  begin
+var
+  textFile: System.TextFile;
+
+begin
     try
       // Set the name of the file that will be created
-      AssignFile(textFile, fileName);
+      AssignFile(textFile, 'output_file.txt');
 
       // Enclose in try/except block to handle errors
       try
@@ -20,7 +19,7 @@ uses
         Rewrite(textFile);
 
         // Adding text
-        WriteLn(textFile, stringText);
+        WriteLn(textFile, 'Hello Text!');
 
       except
         // Catch error here
@@ -31,13 +30,7 @@ uses
       // Close file
       CloseFile(textFile);
     end;
-  end;
 
-begin
-
-  // Write a text to a file
-  WriteTextToFile('hello-text.txt', 'Hello There! How are you?');
-
-  // Wait for enter
-  readln;
+  // Pause console
+  ReadLn;
 end.
