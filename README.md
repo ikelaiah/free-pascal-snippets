@@ -141,3 +141,14 @@ No installation needed. Just download or `git clone` the repo to your local driv
 Distributed under the MIT License. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Thanks
+
+- The FPC devs for the joy of Object Pascal.
+- The Lazarus IDE devs for making such an amazing IDE.
+- The people behind various units/modules in OPM.
+- The lovely people at the [Unofficial Free Pascal discord server](https://discord.com/channels/570025060312547359/570091337173696513). You guys are gems.
+- The fine people at the [Free Pascal & Lazarus forum](https://forum.lazarus.freepascal.org/index.php).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
