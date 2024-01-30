@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ikelaiah/free-pascal-snippets">
-    <img src="Images/logo.png" alt="Logo" width="128" height="128">
+    <img src="Images/logo.jpg" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">Free Pascal Snippets</h3>
