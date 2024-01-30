@@ -143,7 +143,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Thanks
+## Acknowledgments
 
 - The FPC devs for sharing the joy of Object Pascal.
 - The Lazarus IDE devs for making such an amazing IDE.
