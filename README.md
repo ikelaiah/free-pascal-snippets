@@ -145,7 +145,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 ## Thanks
 
-- The FPC devs for the joy of Object Pascal.
+- The FPC devs for sharing the joy of Object Pascal.
 - The Lazarus IDE devs for making such an amazing IDE.
 - The people behind various units/modules in OPM.
 - The lovely people at the [Unofficial Free Pascal discord server](https://discord.com/channels/570025060312547359/570091337173696513). You guys are gems.
