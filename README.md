@@ -12,7 +12,7 @@
 <h3 align="center">Free Pascal Snippets</h3>
 
   <p align="center">
-    This repository contains Free Pascal code snippets that I've put together while learning Object Pascal using Lazarus IDE and the Free Pascal Compiler (FPC).
+    This repository contains (work in progress) Free Pascal code snippets that I've put together while learning Object Pascal using Lazarus IDE and the Free Pascal Compiler (FPC).
     <br />
     <a href="https://github.com/ikelaiah/free-pascal-snippets"><strong>Explore the docs »</strong></a>
     <br />
