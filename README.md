@@ -21,7 +21,7 @@
     ·
      <a href="https://ikelaiah.github.io/free-pascal-and-lazarus-cookbook">Read Free Pascal and Lazarus Cookbook</a>
     ·
-    <a href="https://github.com/ikelaiah/free-pascal-and-lazarus-cookbook">View Cookbook's repo</a>
+    <a href="https://github.com/ikelaiah/free-pascal-and-lazarus-cookbook">View Cookbook repo</a>
   </p>
 </div>
 
