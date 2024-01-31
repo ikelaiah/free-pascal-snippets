@@ -12,14 +12,33 @@
 <h3 align="center">Free Pascal Snippets</h3>
 
   <p align="center">
-    This repository contains (work in progress) Free Pascal code snippets that I've put together while learning Object Pascal using Lazarus IDE and the Free Pascal Compiler (FPC).
+    A collection of Free Pascal snippets that I put together while learning Object Pascal. This repo is part of a Free Pascal cookbook (my study note).
     <br />
-    <a href="https://github.com/ikelaiah/free-pascal-snippets"><strong>Explore the docs »</strong></a>
+        <a href="https://github.com/ikelaiah/free-pascal-snippets"><strong>Explore the docs »</strong></a>
     <br />
+    <br/>
+    <a href="#contents">Explore Contents</a>
+    ·
+     <a href="https://ikelaiah.github.io/free-pascal-and-lazarus-cookbook">Read Free Pascal and Lazarus Cookbook</a>
+    ·
+    <a href="https://github.com/ikelaiah/free-pascal-and-lazarus-cookbook">View Cookbook's repo</a>
   </p>
 </div>
 
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
+![Demo Screen 1](Images/demo-01.png)
+
+![Demo Screen 2](Images/demo-02.png)
+
+This repository contains a collection of Free Pascal code snippets (work in progress) that I put togehter while studying Object Pascal with the Lazarus IDE and the Free Pascal Compiler (FPC).
+
+It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.io/free-pascal-and-lazarus-cookbook) project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTENTS -->
 
 ## Contents
 
@@ -108,6 +127,8 @@ Examples on using regex expressions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- GETTING STARTED -->
+
 ## Getting Started
 
 ### Prerequisites
@@ -136,13 +157,14 @@ No installation needed. Just download or `git clone` the repo to your local driv
 1. Navigate to an example folder.
 2. Open the `.lpr` file. This is the program source code.
 
+<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 - The FPC devs for sharing the joy of Object Pascal.
