@@ -12,7 +12,8 @@
 <h3 align="center">Free Pascal Snippets</h3>
 
   <p align="center">
-    A collection of Free Pascal snippets that I put together while learning Object Pascal. This repo is part of a Free Pascal cookbook (my study note).
+    A collection of Free Pascal snippets that I put together while learning Object Pascal. 
+    <br>This repo is part of my study note — <i>Free Pascal and Lazarus Cookbook</i>.
     <br />
         <a href="https://github.com/ikelaiah/free-pascal-snippets"><strong>Explore the docs »</strong></a>
     <br />
