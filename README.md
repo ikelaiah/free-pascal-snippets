@@ -170,7 +170,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 Iwan Kelaiah - iwan.kelaiah@gmail.com
 
-Project Link: [https://github.com/ikelaiah/free-pascal-and-lazarus-cookbook](https://github.com/ikelaiah/free-pascal-and-lazarus-cookbook)
+Project Link: [https://github.com/ikelaiah/free-pascal-snippets](https://github.com/ikelaiah/free-pascal-snippets)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
