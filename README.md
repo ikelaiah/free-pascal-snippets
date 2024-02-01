@@ -141,7 +141,7 @@ You can find the latest installer here; [https://github.com/LongDirtyAnimAlf/fpc
 
 ### Installation
 
-No installation needed. Just download or `git clone` the repo to your local drive.
+None. Just download or `git clone` the repo to your local drive.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,6 +164,16 @@ No installation needed. Just download or `git clone` the repo to your local driv
 Distributed under the MIT License. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Iwan Kelaiah - iwan.kelaiah@gmail.com
+
+Project Link: [https://github.com/ikelaiah/free-pascal-and-lazarus-cookbook](https://github.com/ikelaiah/free-pascal-and-lazarus-cookbook)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
