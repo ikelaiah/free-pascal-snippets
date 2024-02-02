@@ -31,8 +31,6 @@
 
 ![Demo Screen 1](Images/demo-01.png)
 
-![Demo Screen 2](Images/demo-02.png)
-
 This repository contains a collection of Free Pascal code snippets (work in progress) that I put togehter while studying Object Pascal with the Lazarus IDE and the Free Pascal Compiler (FPC).
 
 It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.io/free-pascal-and-lazarus-cookbook) project.
