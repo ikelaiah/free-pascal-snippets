@@ -1,6 +1,6 @@
 program FGLIntegerList;
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 
 uses
   fgl,

@@ -1,7 +1,6 @@
 program DynamicArrayExample;
 
-{$mode objfpc}
-{$H+}
+{$mode objfpc}{$H+}{$J-}
 {$modeswitch arrayoperators}
 
 uses

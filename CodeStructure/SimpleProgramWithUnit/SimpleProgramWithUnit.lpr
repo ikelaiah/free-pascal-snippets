@@ -1,6 +1,6 @@
 program SimpleProgramWithUnit;
 
-{$mode ObjFPC}{$H+}{$J-}
+{$mode objfpc}{$H+}{$J-}{$J-}
 
 uses
   {$IFDEF UNIX}

@@ -1,6 +1,6 @@
 program TListCustomComparison;
 
-{$mode objfpc}{$H+}{$modeSwitch advancedRecords}
+{$mode objfpc}{$H+}{$J-}{$modeSwitch advancedRecords}
 
 uses
   Generics.Defaults,

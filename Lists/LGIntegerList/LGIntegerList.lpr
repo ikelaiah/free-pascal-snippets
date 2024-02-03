@@ -1,6 +1,6 @@
 program LGIntegerList;
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 
 uses
   Classes,

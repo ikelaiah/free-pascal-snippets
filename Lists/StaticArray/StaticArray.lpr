@@ -1,6 +1,6 @@
 program StaticArrayExample;
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 
 uses
   Generics.Collections;

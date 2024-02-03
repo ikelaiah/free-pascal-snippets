@@ -1,6 +1,6 @@
 program TStreamReaderReadFile;
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 
 uses
   Classes,

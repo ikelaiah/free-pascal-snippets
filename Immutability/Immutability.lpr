@@ -1,6 +1,6 @@
 program Immutability;
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 
 const
   gravityEarth:Real = 9.81;

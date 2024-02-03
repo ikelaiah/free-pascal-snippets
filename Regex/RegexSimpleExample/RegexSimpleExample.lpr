@@ -9,7 +9,7 @@ program RegexSimple;
 // Matches!
 // $
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 
 uses
   RegExpr;
