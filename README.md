@@ -50,6 +50,12 @@ All about structuring Pascal source files.
 - **UnitStructure**. Structure of a Unit file.
 - **SimpleProgramWithUnit**. An example of creating and using a unit file.
 
+### Hello World
+
+- **HelloWorldSimple**. An example of a Hello World program.
+- **HelloWorldPause**. An example of a Hello World program and pause console at the end.
+- **HelloWorldAlt**. An example of a Hello World program with more readable directives.
+
  ### Command Line Arguments
 
 All about parsing command line arguments and options.
