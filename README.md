@@ -52,6 +52,8 @@ All about structuring Pascal source files.
 
 ### Hello World
 
+The starting point for everyone.
+
 - **HelloWorldSimple**. An example of a Hello World program.
 - **HelloWorldPause**. An example of a Hello World program and pause console at the end.
 - **HelloWorldAlt**. An example of a Hello World program with more readable directives.
@@ -129,6 +131,11 @@ Examples on using regex expressions.
 - **RegexSimpleExample**. A simple pattern matching using regex.     
 - **ReplaceDateSeparators**. An example of replacing date separators using regex.
 
+### Threading
+
+Using threads in Free Pascal.
+
+- **CreateThreads**. A simple example of creating threads using `TThread`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
