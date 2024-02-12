@@ -73,9 +73,8 @@ const
 
 begin
 
-  // Set port
+  // Set port no & enable multi-threading to handle http requests
   Application.Port := port;
-  // Set multi-threading
   Application.Threaded := isThreaded;
 
   // Setup routes
