@@ -80,7 +80,7 @@ begin
   // Setup routes
   HTTPRouter.RegisterRoute('/api/timestamp', rmGet, @TimestampEndPoint);
   HTTPRouter.RegisterRoute('/api/greet/:name', rmGet, @GreetEndpoint);
-  HTTPRouter.RegisterRoute('/404', rmGet, @ErrorEndPoint, True);
+  HTTPRouter.RegisterRoute('/404', rmGet, @ErrorEndPoint, True); // Set as the default endpoint
 
   // Initialise and run, with a message
   Application.Initialize;
