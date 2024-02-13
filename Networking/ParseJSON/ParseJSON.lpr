@@ -7,10 +7,12 @@ uses
   cthreads,
   {$ENDIF}
   Classes,
+  // For making web requests
   opensslsockets,
+  fphttpclient,
+  // For parsing JSON data
   fpjson,
-  jsonparser,
-  fphttpclient;
+  jsonparser;
 
 var
   url: string = 'https://dummyjson.com/users?limit=3'; // endpoint to get JSON mock data
