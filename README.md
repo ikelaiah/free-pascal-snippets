@@ -139,6 +139,12 @@ Using threads in Free Pascal.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Networking
+
+- **GetRequest**. A simple Get request demo. Based on [FreePascal and JSON](https://medium.com/@marcusfernstrm/freepascal-and-json-337c04cad489) by Marcus Fernström.
+- **ParseJSON**. A snippet to show how to parse JSON data. Based on [FreePascal and JSON](https://medium.com/@marcusfernstrm/freepascal-and-json-337c04cad489) by Marcus Fernström.
+- **SimpleApiWebserver**. An example ocreating a simple API webserver. Based on [Create REST API’s with FreePascal](https://medium.com/@marcusfernstrm/create-rest-apis-with-freepascal-441e4aa447b7) by Marcus Fernström.
+
 <!-- GETTING STARTED -->
 
 ## Getting Started
