@@ -26,7 +26,6 @@ begin
   WriteLn('Contacting ', url, ' ...');
   rawJson := TFPHTTPClient.SimpleGet(url);
 
-
   // Next, get the users array as TJSONArray;
   // 1. convert the raw JSON data to TJSONData,
   // 2. find data called "users" (a JSON array as per dummyjson's structure) and
