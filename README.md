@@ -58,7 +58,7 @@ The starting point for everyone.
 - **HelloWorldPause**. An example of a Hello World program and pause console at the end.
 - **HelloWorldAlt**. An example of a Hello World program with more readable directives.
 
- ### Command Line Arguments
+### Command Line Arguments
 
 All about parsing command line arguments and options.
 
@@ -98,6 +98,9 @@ All about file handling; reading and writing.
 
 Ensuring `const` behaving like `const` in other programing languages.
 
+### Loops
+
+- **Loops** - Examples of loops in Free Pascal.
 
 ### Lists
 
@@ -123,6 +126,14 @@ All things about numbers.
 - **RandomRealNumberList**. Create a list of random number using LGenerics.
 - **RandomRealNumberListv2**. Create a list of random number using a dynamic array.
 
+
+### Directory, Paths and Filenames (DirsPathsFiles)
+
+Snippets relating to Folders, Paths and Filesnames.
+
+- **CheckDirExists** - Check if a folder exists.
+- **GetHomeDir** - Get user home dir in Free Pascal.
+- **ListAllFiles** - List files recursively using wildcards.
 
 ### Regex
 
