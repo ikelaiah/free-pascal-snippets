@@ -19,7 +19,7 @@ begin
   // Get a random (real) number between min and max
   randomRealNumber := RandomNumberBetween(min, max);
 
-  writeln('Random real number between ', min: 0: 6, ' and ', max: 0: 6, ' is: ', randomRealNumber: 0: 6);
+  WriteLn('Random real number between ', min: 0: 6, ' and ', max: 0: 6, ' is: ', randomRealNumber: 0: 6);
 
   // Pause console
   ReadLn;

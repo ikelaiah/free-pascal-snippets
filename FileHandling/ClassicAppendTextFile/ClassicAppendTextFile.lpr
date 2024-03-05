@@ -58,7 +58,7 @@ begin
     except
       // Catch error here
       on E: EInOutError do
-        writeln('Error occurred. Details: ', E.ClassName, '/', E.Message);
+        WriteLn('Error occurred. Details: ', E.ClassName, '/', E.Message);
     end;
 
   finally

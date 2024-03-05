@@ -17,8 +17,8 @@ var
 begin
 
   // Provide user feedback
-  writeln(Format('Reading ''%s''', [filename]));
-  writeln('--------------------');
+  WriteLn(Format('Reading ''%s''', [filename]));
+  WriteLn('--------------------');
 
   // Assign filename to a TextFile variable - set the name of the file for reading
   AssignFile(textFile, filename);
@@ -40,11 +40,11 @@ begin
 
   except
     on E: Exception do
-      writeln('File handling error occurred. Details: ', E.Message);
+      WriteLn('File handling error occurred. Details: ', E.Message);
   end;
 
   // Pause console
-  writeln('--------------------');
-  writeln('Press Enter to quit.');
-  readln;
+  WriteLn('--------------------');
+  WriteLn('Press Enter to quit.');
+  ReadLn;
 end.

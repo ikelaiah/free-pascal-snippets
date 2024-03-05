@@ -54,7 +54,7 @@ uses
           begin
             if IsFileNameMatching(path + searchRec.Name, regexPattern) then
               // If it matches regex expression, display name
-              writeln(path + searchRec.Name);
+              WriteLn(path + searchRec.Name);
           end;
         end;
       until FindNext(searchRec) <> 0;

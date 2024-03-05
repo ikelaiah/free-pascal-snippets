@@ -25,7 +25,7 @@ uses
       except
         // Catch error here
         on E: EInOutError do
-          writeln('Error occurred. Details: ', E.ClassName, '/', E.Message);
+          WriteLn('Error occurred. Details: ', E.ClassName, '/', E.Message);
       end;
     finally
       // Close file
@@ -38,6 +38,6 @@ begin
   // Write a text to a file
   WriteTextToFile('hello-text.txt', 'Hello There! How are you?');
 
-  // Wait for enter
-  readln;
+  // Pause console
+  ReadLn;
 end.

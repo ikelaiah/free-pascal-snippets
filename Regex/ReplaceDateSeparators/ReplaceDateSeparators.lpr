@@ -41,7 +41,7 @@ begin
     WriteLn(ReplaceDateSeparatorWithQMark(dateInput3));
   except
     on E: Exception do
-      writeln('Error: ' + E.Message);
+      WriteLn('Error: ' + E.Message);
   end;
   // Pause Console
   ReadLn;

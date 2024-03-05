@@ -26,5 +26,5 @@ begin
 
   // Pause console
   WriteLn('Press Enter key to exit ...');
-  readln;
+  ReadLn;
 end.
