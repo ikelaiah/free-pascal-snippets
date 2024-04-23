@@ -10,7 +10,7 @@ uses
   SysUtils;
 
 const
-  BUFFER_SIZE = 65536;
+  BUFFER_SIZE = 131072;
 
 var
   filename: string;
