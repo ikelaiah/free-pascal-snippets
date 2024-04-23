@@ -208,8 +208,13 @@ Project Link: [https://github.com/ikelaiah/free-pascal-snippets](https://github.
 
 - The FPC devs for sharing the joy of Object Pascal.
 - The Lazarus IDE devs for making such an amazing IDE.
-- The people behind various units/modules in OPM.
-- The lovely people at the [Unofficial Free Pascal discord server](https://discord.com/channels/570025060312547359/570091337173696513). You guys are gems.
-- The fine people at the [Free Pascal & Lazarus forum](https://forum.lazarus.freepascal.org/index.php).
+- The dedicated people behind various units/modules in OPM.
+- The kind and helpful individuals on various online platforms such as;
+
+    - [Unofficial Free Pascal discord server](https://discord.com/channels/570025060312547359/570091337173696513).
+    - [Free Pascal & Lazarus forum](https://forum.lazarus.freepascal.org/index.php).
+    - [Tweaking4All Delphi, Lazarus, Free Pascal forum](https://www.tweaking4all.com/forum/delphi-lazarus-free-pascal/).
+    - [Laz Planet - Blogspot](https://lazplanet.blogspot.com) / [Laz Planet - GitLab](https://lazplanet.gitlab.io).
+    - [Delphi Basics](https://www.delphibasics.co.uk/index.html).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
