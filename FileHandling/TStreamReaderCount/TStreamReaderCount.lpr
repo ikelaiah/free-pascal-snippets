@@ -1,4 +1,4 @@
-program TFileStreamCount;
+program TStreamReaderCount;
 
 {$mode objfpc}{$H+}{$J-}
 
@@ -11,14 +11,18 @@ uses
   streamex;
 
 var
+  filename: string;
   fStream: TFileStream;
   fReader: TStreamReader;
   total: int64;
   line: string;
 
 begin
+  // Get filename
+  filename := ParamStr(1);
+
   // Do we have a valid input file?
-  if Length(ParamStr(1)) < 3 then
+  if not FileExists(filename) then
   begin
     WriteLn('Please specify a valid input file.');
     Exit;
@@ -29,9 +33,9 @@ begin
 
   // try - except block start
   try
-    fStream := TFileStream.Create(ParamStr(1), fmOpenRead or fmShareDenyWrite);
+    fStream := TFileStream.Create(filename, fmOpenRead or fmShareDenyWrite);
     try
-      fReader := TStreamReader.Create(fStream);
+      fReader := TStreamReader.Create(fStream, 131072, False);
       try
         while not fReader.EOF do
         begin
@@ -40,7 +44,7 @@ begin
           // Process line here if needed
           // ....
           // Increase counter
-          Inc(total);
+          total := total + 1;
         end;
       finally
         fReader.Free;
@@ -55,6 +59,5 @@ begin
   except
     on E: Exception do
       WriteLn('Error: ' + E.Message);
-
   end; // try - except block ends
 end.

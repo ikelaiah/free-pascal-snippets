@@ -10,7 +10,7 @@
         <MainUnitHasScaledStatement Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="TFileStreamCount"/>
+      <Title Value="ClassicCountLine"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -21,7 +21,7 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="TFileStreamCount"/>
+            <Filename Value="ClassicCountLine"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
@@ -56,7 +56,7 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="TFileStreamCount"/>
+            <Filename Value="ClassicCountLine"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
@@ -87,7 +87,7 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="TFileStreamCount.lpr"/>
+        <Filename Value="ClassicCountLine.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -96,7 +96,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="TFileStreamCount"/>
+      <Filename Value="ClassicCountLine"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
