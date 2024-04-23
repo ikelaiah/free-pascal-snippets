@@ -35,12 +35,13 @@ begin
 
   // Assign filename to a TextFile variable - set the name of the file for reading
   AssignFile(textFile, filename);
-  SetTextBuf(textFile, buffer);
 
   // Perform the read operation in a try..except block to handle errors gracefully
   try
     // Open the file for reading
     Reset(textFile);
+    // Set buffer
+    SetTextBuf(textFile, buffer);
 
     // Keep reading lines until the end of the file is reached
     while not EOF(textFile) do
