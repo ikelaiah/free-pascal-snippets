@@ -17,6 +17,9 @@ type
   TStudentList = specialize TGLiteVector<TStudent>;
   TStrList = specialize TGLiteVector<string>;
 
+const
+  maxThreads: int64 = 4;
+
 var
   startStudentID: int64 = 200000;
   finalStudentList: TStudentList;

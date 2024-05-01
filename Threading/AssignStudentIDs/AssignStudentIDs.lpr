@@ -2,7 +2,7 @@ program AssignStudentIDs;
 
 {
  This program read a list of student names, and assign a student ID for each
- student using 2 threads, into a shared output variable.
+ student using N threads, into a shared output variable.
 
  Pre-requisite
 
@@ -37,8 +37,6 @@ uses
   streamex, Common, CustomThread;
 
   // All the variables and procedures to get the job done.
-const
-  maxThreads: int64 = 4;
 var
   customCriticalSection: TRTLCriticalSection;
   fileStream: TFileStream;
@@ -80,22 +78,20 @@ begin
     SetLength(myThreads, maxThreads);
     try
       {
-        3b. Now we add threads & assign workloads, using rounding up division.
-        - Why? By using the expression Ceil((totalElements + N - 1) div N), we
-          ensure that all elements are distributed among the subarrays as evenly
-          as possible, with any remaining elements placed in the last subarray.
-        - When we divide totalElements by N, we get the quotient of the division.
-          However, if totalElements is not evenly divisible by N, there might be
-          a remainder.
-        - In the context of splitting an array into subarrays, we want each
-          subarray to have approximately the same number of elements. Therefore,
-          we want to ensure that any remaining elements after dividing
-          totalElements by N are included in the last subarray to avoid losing
-          data.
-        - The expression Ceil((totalElements + N - 1) div N); effectively rounds up
-          the division by adding N - 1 to totalElements before performing the
-          division. This ensures that any remainder is accounted for in
-          the last subarray.
+        3b. Now we add threads & assign workloads, using rounding up division --
+            Ceil((totalElements + N - 1) div N).
+            - When we divide totalElements by N, we get the quotient of the
+              division. However, if totalElements is not evenly divisible by N,
+              there might be a remainder.
+            - In the context of splitting an array into subarrays, we want
+              each subarray to have approximately the same number of elements.
+              Therefore, we want to ensure that any remaining elements after
+              dividing totalElements by N are included in the last subarray to
+              avoid losing data.
+            - The expression Ceil((totalElements + N - 1) div N); effectively
+              rounds up the division by adding N - 1 to totalElements before
+              performing the division. **This ensures that any remainder is
+              accounted for in the last subarray**.
       }
       subArraySize := Math.Ceil((studentList.Count + maxThreads - 1) / maxThreads);
 
