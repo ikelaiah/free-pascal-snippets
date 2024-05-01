@@ -34,29 +34,7 @@ uses
   Classes,
   SysUtils,
   Math,
-  lgVector,
-  streamex;
-
-type
-  TStudent = record
-    Name: string;
-    id: integer;
-  end;
-
-type
-  TStudentList = specialize TGLiteVector<TStudent>;
-  TStrList = specialize TGLiteVector<string>;
-
-  // Create a thread class deriving from TThread.
-type
-  TCustomThread = class(TThread)
-  private
-    list: TstrList;
-  protected
-    procedure Execute; override;
-  public
-    constructor Create(const listToProcess: TStrList; startIndex, finishIndex: int64);
-  end;
+  streamex, Common, CustomThread;
 
   // All the variables and procedures to get the job done.
 const
@@ -65,54 +43,9 @@ var
   customCriticalSection: TRTLCriticalSection;
   fileStream: TFileStream;
   streamReader: TStreamReader;
-  startStudentID: int64 = 200000;
   studentList: TStrList;
-  finalStudentList: TStudentList;
   myThreads: array of TThread;
   subArraySize, index: int64;
-
-  // Create the Custom Thread with an input list to process.
-  constructor TCustomThread.Create(const listToProcess: TStrList;
-    startIndex, finishIndex: int64);
-  var
-    index: int64;
-  begin
-    // This won't start the threads straight away.
-    inherited Create(True);
-
-    // Not to free on terminate.
-    //FreeOnTerminate := True;
-
-    // Populate the internal list for the Execute procedure
-    for index := startIndex to finishIndex do
-    begin
-      self.list.Add(listToProcess[index]);
-    end;
-
-    // User feedback
-    WriteLn('Thread created ', ThreadID);
-  end;
-  // Enter and leave Critical Section here.
-  procedure TCustomThread.Execute;
-  var
-    index: int64;
-    student: TStudent;
-  begin
-    for index := 0 to self.list.Count - 1 do
-    begin
-      EnterCriticalSection(customCriticalSection); // --------------- enter cs
-      try
-        // Add TStudent into TStudentList
-        student.Name := list[index];
-        student.id := startStudentID;
-        finalStudentList.Add(student);
-        // Increment student ID by 1
-        startStudentID := startStudentID + 1
-      finally
-        LeaveCriticalSection(customCriticalSection); // ------------- leave cs
-      end;
-    end;
-  end;
 
   // Main block ////////////////////////////////////////////////////////////////
 begin
@@ -181,8 +114,10 @@ begin
       for index := 1 to maxThreads do
       begin
         myThreads[index - 1] :=
-          TCustomThread.Create(studentList, ((index - 1) * subArraySize),
-                                            Math.Min(index * subArraySize - 1, studentList.Count - 1));
+          TCustomThread.Create(customCriticalSection,
+                               studentList,
+                               ((index - 1) * subArraySize),
+                               Math.Min(index * subArraySize - 1, studentList.Count - 1));
       end;
 
       // 4. Start all threads

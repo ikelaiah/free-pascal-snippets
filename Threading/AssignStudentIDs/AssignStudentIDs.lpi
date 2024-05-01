@@ -29,6 +29,16 @@
         <Filename Value="AssignStudentIDs.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="common.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Common"/>
+      </Unit>
+      <Unit>
+        <Filename Value="customthread.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CustomThread"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
