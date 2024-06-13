@@ -6,7 +6,7 @@ program TFileStreamSplitFile;
 
  1. Open the file and allocate memory bufers for reading chunks of data.
 
- 2. Read the file in chunks and parse the data until we reach to last `\n` character in the chunk.
+ 2. Read the file in chunks and locate the last `\n` character in the chunk.
     Once it locates the last `\n` in the chunk, move the file pointer back to include
     that byte and any preceding bytes of the partial line in the next chunk's read operation.
 
