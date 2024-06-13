@@ -17,12 +17,14 @@ type
     procedure Execute; override;
   public
     constructor Create(const criticalSection: TRTLCriticalSection; const listToProcess: TStrList; startIndex, finishIndex: int64);
+    destructor Destroy;
   end;
 
 implementation
 
 // Create the Custom Thread with an input list to process.
-constructor TCustomThread.Create(const criticalSection: TRTLCriticalSection; const listToProcess: TStrList; startIndex, finishIndex: int64);
+constructor TCustomThread.Create(const criticalSection: TRTLCriticalSection;
+                                 const listToProcess: TStrList; startIndex, finishIndex: int64);
 var
   index: int64;
 begin
@@ -35,6 +37,7 @@ begin
   self.cs := criticalSection;
 
   // Populate the internal list for the Execute procedure
+  self.list := TStrList.Create;
   for index := startIndex to finishIndex do
   begin
     self.list.Add(listToProcess[index]);
@@ -43,6 +46,13 @@ begin
   // User feedback
   WriteLn('Thread created ', ThreadID);
 end;
+
+destructor TCustomThread.Destroy;
+begin
+  self.list.Free;
+  inherited Destroy;
+end;
+
 // Enter and leave Critical Section here.
 procedure TCustomThread.Execute;
 var
@@ -64,5 +74,7 @@ begin
     end;
   end;
 end;
+
+
 
 end.
