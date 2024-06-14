@@ -2,12 +2,7 @@ program AssignStudentIDs;
 
 {
  This program assigns student ID to each name from a text file by
- performing following steps.
-
-   (1) read a list of student names,
-   (2) assign a student ID for each student,
-   (3) using N threads into a shared output variable and
-   (4) sort the output by student name.
+ using N number of threads.
 
  Pre-requisite
 
@@ -43,7 +38,8 @@ program AssignStudentIDs;
       - Specify the start and finish indexes to each thread.
       - Will use the rounding up division method to ensure near-equal division
         of workload for each thread.
-    - Wait until all task is done.
+    - Wait until all task is done
+    - Sort the final student list
     - Print results on screen.
 
  Sample Output
@@ -53,28 +49,27 @@ program AssignStudentIDs;
    Max threads            : 4
    subArray size round up : 51
    ---------------------------------
-   Thread created 46696
-   Thread created 28728
-   Thread created 45456
-   Thread created 46740
+   Thread created 25040
+   Thread created 26324
+   Thread created 11972
+   Thread created 26028
    Starting threads ...
    Waiting for threads to finish ...
    All threads are done ...
    Printing results ...
-   Adeline Khan, 200030
-   Alessandra Nguyen, 200163
-   Alessia Harrison, 200177
    Alyssa Morgan, 200000
-   Amara Larson, 200062
+   Declan Hayes, 200001
+   Nora Patel, 200002
+   Miles Thompson, 200003
+   Sienna Larson, 200004
+   Kellan Rivera, 200005
+   Camille Chang, 200006
+   Jensen Park, 200007
    Amara Singh, 200008
-   Anika Kim, 200171
-   Anika Rodriguez, 200079
-   Annalise Martinez, 200120
-   Arabella Kim, 200157
-   Arabella Park, 200091
-   Ares Patel, 200172
-   Aria Martinez, 200066
-   Aria Sullivan, 200100
+   Holden Myers, 200009
+   Elise Howard, 200010
+   Luca Griffin, 200011
+   Reagan Patel, 200012
    ...
    ...
 
@@ -196,18 +191,15 @@ begin
           myThreads[index].WaitFor;
         WriteLn('All threads are done ...');
 
-
-        // 6. Sort by student name
-        finalStudentList.Sort(TStudentListComparer.construct(@CompareName));
-
+        // 6. Sort by student ID
+        finalStudentList.Sort(TStudentListComparer.construct(@CompareID));
 
         // 7. Show results
         WriteLn('Printing results ...');
         for index := 0 to finalStudentList.Count - 1 do
           WriteLn(finalStudentList[index].Name, ', ', finalStudentList[index].id);
 
-
-        // Show user feedback
+        // 8. Show user feedback
         WriteLn('---------------------------------');
         WriteLn(Format('Output list contains %d items', [finalStudentList.Count]));
         WriteLn('---------------------------------');

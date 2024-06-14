@@ -5,7 +5,7 @@ unit Common;
 interface
 
 uses
-  Classes, SysUtils, Generics.Defaults, Generics.Collections;
+  Classes, SysUtils, Generics.Defaults, Generics.Collections, Math;
 
 type
   TStudent = record
@@ -31,15 +31,14 @@ var
   finalStudentList: TStudentList;
 
 // Custom comparison function for sorting by name - ascending
-function CompareName(const LeftItem, RightItem: TStudent): integer;
+function CompareID(const LeftItem, RightItem: TStudent): integer;
 
 implementation
 
-// Custom comparison function for sorting by name - ascending
-function CompareName(const LeftItem, RightItem: TStudent): integer;
+// Custom comparison function for sorting by student id - ascending
+function CompareID(const LeftItem, RightItem: TStudent): integer;
 begin
-  Result := CompareStr(LeftItem.Name, RightItem.Name);
+  Result := CompareValue(LeftItem.id, RightItem.id);
 end;
-
 
 end.

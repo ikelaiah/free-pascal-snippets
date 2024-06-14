@@ -17,7 +17,7 @@ type
     procedure Execute; override;
   public
     constructor Create(const criticalSection: TRTLCriticalSection; const listToProcess: TStrList; startIndex, finishIndex: int64);
-    destructor Destroy;
+    destructor Destroy; override;
   end;
 
 implementation
@@ -74,7 +74,5 @@ begin
     end;
   end;
 end;
-
-
 
 end.
