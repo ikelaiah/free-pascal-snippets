@@ -38,7 +38,7 @@ program AssignStudentIDs;
       - Specify the start and finish indexes to each thread.
       - Will use the rounding up division method to ensure near-equal division
         of workload for each thread.
-    - Wait until all task is done
+    - Wait for the threads to finish and then free them.
     - Sort the final student list
     - Print results on screen.
 
@@ -185,10 +185,13 @@ begin
         for index := 0 to High(myThreads) do
           myThreads[index].Start;
 
-        // 5. Wait for both threads to finish
+        // 5. Wait for both threads to finish and free
         WriteLn('Waiting for threads to finish ...');
         for index := 0 to High(myThreads) do
-          myThreads[index].WaitFor;
+          begin
+            myThreads[index].WaitFor;
+            myThreads[index].Free;
+          end;
         WriteLn('All threads are done ...');
 
         // 6. Sort by student ID

@@ -43,8 +43,9 @@ begin
   // If user pass True, thread won't start automatically
   inherited Create(True);
 
-  // Free threads on terminate.
-  FreeOnTerminate := True;
+  // Not free threads on terminate.
+  // Threads will be freed from the main thread.
+  FreeOnTerminate := False;
 
   // Assign critical section
   self.cs := criticalSection;
