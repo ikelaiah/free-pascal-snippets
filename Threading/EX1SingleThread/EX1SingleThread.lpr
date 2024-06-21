@@ -9,7 +9,6 @@ uses
   Classes { you can add units after this };
 
 type
-
   // The TThread class encapsulates the native thread support of the OS.
   // To create a thread, (1) declare a child of the TThread object, ...
   TMyThread = class(TThread)
@@ -35,9 +34,9 @@ type
     // Assign a data to work with.
     self.aString:=message;
 
-    // Free thread when finished.
-    FreeOnTerminate:=True;
-
+    // Won't free the thread when finished.
+    // The thread will be freed manually on the main block.
+    FreeOnTerminate:=False;
   end;
 
   procedure TMyThread.Execute;
@@ -46,7 +45,7 @@ type
 
     // Example: if the thread has a data to work with,
     //          use it to achieve a goal.
-    WriteLn('Thread ', ThreadID, ' is printing ', self.aString);
+    WriteLn('Thread ID ', ThreadID, ' is printing ', self.aString);
 
     // Example: simulate a long running process.
     Sleep(1000);
@@ -68,12 +67,16 @@ WriteLn('We are in the main thread');
 myThread.Start;
 
 // Wait until the thread is done before going back to
-// the main thread
+// the main thread.
 myThread.WaitFor;
 
-// Debug line
+// Free threads manually.
+myThread.Free;
+
+// Debug line.
 WriteLn('We are in the main thread again');
 
+// Pause console.
 WriteLn('Press enter key to quit');
 ReadLn;
 
