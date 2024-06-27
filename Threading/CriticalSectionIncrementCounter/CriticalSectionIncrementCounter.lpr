@@ -43,7 +43,6 @@ const
 
 var
   customCriticalSection: TRTLCriticalSection;
-  // To be updated multi threading
   mainCounter: integer;
 
   procedure TCustomThread.Execute;
@@ -81,7 +80,6 @@ var
   var
     i: integer;
     Threads: array[1..4] of TCustomThread;
-    AllFinished: boolean;
   begin
     mainCounter := 0;
 
@@ -92,21 +90,32 @@ var
     for i := Low(Threads) to High(Threads) do
       Threads[i] := TCustomThread.Create(False);
 
+    WriteLn('All threads created ...');
+
     // Wait till all threads finished
-    repeat
+    {repeat
       AllFinished := True;
       for i := Low(Threads) to High(Threads) do
         if not Threads[i].isFinished then AllFinished := False;
-    until AllFinished;
+    until AllFinished;}
+
+    // Wait for the threads to finish
+    for i := Low(Threads) to High(Threads) do
+      Threads[i].WaitFor;
+
+    WriteLn('All threads completed ...');
 
     // Free the threads
     for i := Low(Threads) to High(Threads) do
       Threads[i].Free;
 
+    WriteLn('All threads are freed ...');
+
     // Free the CriticalSection
     DoneCriticalSection(customCriticalSection);
 
     // Show the mainCounter
+    WriteLn('Printing the value of shared variable ...');
     WriteLn('Counter = ' + IntToStr(mainCounter));
   end;
 
@@ -117,7 +126,7 @@ begin
   else
     WriteLn('Critical Section: Disabled');
 
-  // Count using multi threading
+  // Count using multi-threading
   IncrementCounter;
 
   // Pause console

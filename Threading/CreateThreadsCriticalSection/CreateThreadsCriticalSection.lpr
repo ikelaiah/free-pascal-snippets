@@ -16,7 +16,7 @@ program CreateThreadsCriticalSection;
     - Print results on screen.
 }
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 
 uses
   {$IFDEF UNIX}
@@ -149,4 +149,8 @@ begin
 
   // Free Critical Section
   DoneCriticalSection(customCriticalSection);
+
+  // Pause console
+  WriteLn('Press enter key to quit ...');
+  ReadLn;
 end.
