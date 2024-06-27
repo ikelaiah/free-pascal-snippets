@@ -44,7 +44,7 @@ const
   isCriticalSectionEnabled: boolean = True;
 
 var
-  customCriticalSection: TRTLCriticalSection;
+  criticalSection: TRTLCriticalSection;
   mainCounter: integer;
 
   procedure TCustomThread.Execute;
@@ -61,7 +61,13 @@ var
     // write the result back, overwriting the result of the other threads.
     for i := 1 to 1000000 do
     begin
-      if isCriticalSectionEnabled then EnterCriticalSection(customCriticalSection);
+
+      if isCriticalSectionEnabled then
+        // 2. Begins the lock.
+        //    When this call returns, the calling thread is the only thread
+        //    running the code between the EnterCriticalSection call and the
+        //    following LeaveCriticalsection call.
+        EnterCriticalSection(criticalSection);
       try
         // Read the current mainCounter
         currentCounter := mainCounter;
@@ -70,7 +76,10 @@ var
         // Write the result back the mainCounter variable
         mainCounter := currentCounter;
       finally
-        if isCriticalSectionEnabled then LeaveCriticalSection(customCriticalSection);
+        if isCriticalSectionEnabled then
+          // 3. Releases the lock.
+          //    Signals that the protected code can be executed by other threads.
+          LeaveCriticalSection(criticalSection);
       end;
     end;
 
@@ -89,8 +98,10 @@ var
   begin
     mainCounter := 0;
 
-    // Create the CriticalSection
-    InitCriticalSection(customCriticalSection);
+    // 1. Initialises a critical section.
+    //    This call must be made before either EnterCrititicalSection or
+    //    LeaveCriticalSection is used.
+    InitCriticalSection(criticalSection);
 
     // Start the threadList
     for index := Low(threadList) to High(threadList) do
@@ -113,8 +124,10 @@ var
 
     WriteLn('All threads are freed ...');
 
-    // Free the CriticalSection
-    DoneCriticalSection(customCriticalSection);
+    // 4. Frees the resources associated with a critical section.
+    //    After this call neither EnterCrititicalSection nor LeaveCriticalSection
+    //    may be used.
+    DoneCriticalSection(criticalSection);
 
     // Show the mainCounter
     WriteLn('Printing the value of shared variable ...');
