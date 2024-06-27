@@ -1,22 +1,24 @@
 program CriticalSectionIncrementCounter;
 
 {
-A demo adapted from \lazarus\examples\multithreading\multithread_critical for CLI.
-This is a simple example using 4 threads to increase a counter.
 
-To enable critical sections, set isCriticalSectionEnabled to True.
-To disable critical sections, set isCriticalSectionEnabled to False.
+  An example adapted from \lazarus\examples\multithreading\multithread_critical
+  for CLI.
+  This is a simple example using 4 threads to increase a counter (shared
+  variable).
 
-With critical sections you will always get 4,000,000.
-Without you will see different results on each run and depending on your
-system.
+  To enable critical sections, set isCriticalSectionEnabled to True.
+  To disable critical sections, set isCriticalSectionEnabled to False.
 
-Important: In most (all?) Unix like systems, the cthread unit must be added
-           to the uses section of the .lpr file. Further, cmem is likely to
-           be significently faster so add it as well. Due to how the units
-           work a sensible order is cmem, cthreads and then perhaps cwstrings.
-           But note that heaptrc does not work with cmem so comment it out
-           while testing/debugging.
+  With critical sections you will always get 4,000,000.
+  Without you will see different results on each run.
+
+  Important: In most Unix like systems, the cthread unit must be added
+             to the uses section of the .lpr file. Further, cmem is likely to
+             be significently faster so add it as well. Due to how the units
+             work a sensible order is cmem, cthreads and then perhaps cwstrings.
+             But note that heaptrc does not work with cmem so comment it out
+             while testing/debugging.
 }
 
 {$mode objfpc}{$H+}{$J-}
@@ -54,7 +56,7 @@ var
     finishedState := False;
 
     // Increment the mainCounter.
-    // Because the other threads are doing the same, it will frequently happen,
+    // Because the other threads are doing the same, it will frequently happen
     // that 2 (or more) threads read the same number, increment it by one and
     // write the result back, overwriting the result of the other threads.
     for i := 1 to 1000000 do
@@ -76,38 +78,38 @@ var
     finishedState := True;
   end;
 
+  {
+   This is the routine that increment a counter
+  }
   procedure IncrementCounter;
   var
-    i: integer;
-    Threads: array[1..4] of TCustomThread;
+    index: integer;
+    threadList: array[1..4] of TCustomThread;
+    isAllThreadsFinished:boolean;
   begin
     mainCounter := 0;
 
     // Create the CriticalSection
     InitCriticalSection(customCriticalSection);
 
-    // Start the threads
-    for i := Low(Threads) to High(Threads) do
-      Threads[i] := TCustomThread.Create(False);
+    // Start the threadList
+    for index := Low(threadList) to High(threadList) do
+      threadList[index] := TCustomThread.Create(False);
 
     WriteLn('All threads created ...');
 
-    // Wait till all threads finished
-    {repeat
-      AllFinished := True;
-      for i := Low(Threads) to High(Threads) do
-        if not Threads[i].isFinished then AllFinished := False;
-    until AllFinished;}
-
-    // Wait for the threads to finish
-    for i := Low(Threads) to High(Threads) do
-      Threads[i].WaitFor;
+    // Wait till all threadList finished
+    repeat
+      isAllThreadsFinished := True;
+      for index := Low(threadList) to High(threadList) do
+        if not threadList[index].isFinished then isAllThreadsFinished := False;
+    until isAllThreadsFinished;
 
     WriteLn('All threads completed ...');
 
-    // Free the threads
-    for i := Low(Threads) to High(Threads) do
-      Threads[i].Free;
+    // Free the threadList
+    for index := Low(threadList) to High(threadList) do
+      threadList[index].Free;
 
     WriteLn('All threads are freed ...');
 
@@ -119,6 +121,7 @@ var
     WriteLn('Counter = ' + IntToStr(mainCounter));
   end;
 
+// Main block ------------------------------------------------------------------
 begin
   // Print status of Critical Section
   if isCriticalSectionEnabled then
@@ -126,7 +129,7 @@ begin
   else
     WriteLn('Critical Section: Disabled');
 
-  // Count using multi-threading
+  // Callt he routine to increment a counter using multi-threading
   IncrementCounter;
 
   // Pause console
