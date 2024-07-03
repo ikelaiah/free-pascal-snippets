@@ -3,18 +3,18 @@ program LargeTextFileParser;
 {
  Description
 
- This program performs a simple parsing of a text file using N threads.
+ This program is a simple example of parsing of a text file using N threads.
  The code reads and divides the text file into chunks and assigns these chunks
  to different threads, ensuring that no chunk splits a paragraph or sentence.
 
  Workflow
 
- 1. File Reading - Read the file in 12MB chunks.
- 2. Data Integrity - Ensure chunks do not split paragraphs or sentences by
-                     adjusting the file pointer based on the last newline
-                     character.
+ 1. File Reading      - Read the file in 12MB chunks.
+ 2. Data Integrity    - Ensure chunks do not split paragraphs or sentences by
+                        adjusting the file pointer based on the last newline
+                        character.
  3. Thread Management - Use up to N threads to process chunks in parallel.
- 4. Display Output - Print the size of each chunk and the first line of each chunk.
+ 4. Display Output    - Print the size of each chunk and the first line of each chunk.
 }
 
 {$mode objfpc}{$H+}{$J-}
@@ -83,8 +83,8 @@ type
 
   {
    This routine reads a text file in chunks and processes each chunk using
-   separate threads. This routine ensure each thread to process a chunk up to
-   the nearest newline, without breaking a paragraph or sentence.
+   separate threads. It ensures each thread processes a chunk up to the
+   nearest newline, without breaking a paragraph or sentence.
   }
   procedure ReadFileInChunks(const FileName: string);
   var
@@ -98,28 +98,22 @@ type
     fStream := TFileStream.Create(FileName, fmOpenRead);
     try
 
-      // Step 1. Initialise variables for buffer, threads and threads counter.
-      // Initialise the buffer; array of char
+      // Initialise variables for buffer, threads and threads counter.
       SetLength(buffer, ChunkSize);
-      // Initialise the array of TFileChunkProcessor
       SetLength(threadList, MaxThreads);
-      // Initialise the number of active threadList
       activeThreads := 0;
 
-      // Step 2. Read the file until the file pointer reaches the end of the
-      // file as indicated by fStream.Size.
+      // Read the file until the file pointer reaches the end of the file
       while fStream.Position < fStream.Size do
       begin
-        // Step 2-1. Get the current buffer size.
-        // The following algorithm ensures that the buffer size for reading
-        // does not exceed the size of the remaining data in the file.
-        bufferSize := Min(ChunkSize, (fStream.Size -
-          fStream.Position) div SizeOf(char));
+        // Determine the buffer size to read and ensuring that the buffer size
+        // for reading does not exceed the size of the remaining data in the file.
+        bufferSize := Min(ChunkSize, (fStream.Size - fStream.Position) div SizeOf(char));
 
-        // Step 2-2. Read as much as bufferSize into our buffer
+        // Read data into buffer
         fStream.Read(buffer[0], bufferSize);
 
-        // Step 2-3. Find the index of the last newline character in the buffer.
+         // Find the index of the last newline character in the buffer
         lastNewLine := -1;
         for index := bufferSize - 1 downto 0 do
         begin
@@ -133,17 +127,15 @@ type
         if lastNewLine = -1 then
           lastNewLine := bufferSize - 1;
 
-        // Step 2-4. Create a thread to process (1) the chunk and (2) the size.
-        // The size of the chunk to process is the index of the \n + 1.
+        // Create a thread to process the chunk and its size (index of \n + 1)
         threadList[activeThreads] := TFileChunkProcessor.Create(buffer, lastNewLine + 1);
         threadList[activeThreads].Start;
 
         {
-          Step 2-5. Adjust the current file position backwards by the number
-          of bytes corresponding to the characters after the last newline.
-          This ensures that the file pointer is set to just after the last
-          newline character in the buffer.
+          Next, adjust file position to the character after the last newline.
 
+          ---
+          Explanation
           ---
 
           Let's say we have a buffer size of 1000 characters, and the last
@@ -165,16 +157,14 @@ type
           This ensures that no line is split between two chunks and maintains
           the integrity of the data being processed.
         }
-        fStream.Position :=
-          fStream.Position - (bufferSize - lastNewLine - 1) * SizeOf(char);
+        fStream.Position := fStream.Position - (bufferSize - lastNewLine - 1) * SizeOf(char);
 
-        // Step 2-6. Increment the counter of active threads.
+        // Increment active thread counter
         Inc(activeThreads);
 
-        // Step 2-7. If the number of the threads is the MaxThreads, wait.
+        // If max threads are active, wait for them to finish
         if activeThreads = MaxThreads then
         begin
-          // Wait for all current threads to finish
           for index := 0 to MaxThreads - 1 do
           begin
             threadList[index].WaitFor;
@@ -183,32 +173,28 @@ type
         end;
       end; // -- End of the `while fStream.Position < fStream.Size do` loop.
 
-      // Step 3. Last cleanup of remaining active threads.
-      // Make sure all threads are completed before returning to the main thread.
+      // Wait for any remaining threads to complete
       for index := 0 to activeThreads - 1 do
       begin
         threadList[index].WaitFor;
       end;
 
     finally
-      // Clean up the fStream.
-      fStream.Free;
+      fStream.Free; // Clean up the file stream
     end;
   end;
 
   // MAIN block ----------------------------------------------------------------
 begin
 
-  // Check if we have an input file.
-  // If not, Exit.
+  // Check if the input file exists
   if not FileExists(ParamStr(1)) then
   begin
     WriteLn('File not found. Does ', ParamStr(1), ' exist?');
     Exit;
   end;
 
-  // If file exists, pass the file into the routine that parse the text file
-  // using multi-threading.
+  // Parse the text file using multi-threading
   try
     ReadFileInChunks(ParamStr(1));
   except
