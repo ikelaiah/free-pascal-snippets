@@ -25,8 +25,8 @@ uses
   Math;
 
 const
-  MaxThreads = 8; // Max threads to use
-  ChunkSize = 12 * 1024 * 1024; // Size of chunk for each thread to process (12MB)
+  MAX_THREADS = 8; // Max threads to use
+  CHUNK_SIZE = 12 * 1024 * 1024; // Size of chunk for each thread to process (12MB)
 
 type
   // The TThread class encapsulates the native thread support of the OS.
@@ -37,23 +37,23 @@ type
   protected
     procedure Execute; override;
   public
-    constructor Create(const Data: array of char; DataSize: integer);
+    constructor Create(const AData: array of char; ADataSize: integer);
   end;
 
-  constructor TFileChunkProcessor.Create(const Data: array of char; DataSize: integer);
+  constructor TFileChunkProcessor.Create(const AData: array of char; ADataSize: integer);
   begin
     // Call parent's constructor and don't start thread automatically
     inherited Create(True);
 
-    // Assign a data size to work with
-    FDataSize := DataSize;
+    // Assign a AData size to work with
+    FDataSize := ADataSize;
 
-    // Allocate memory for data and copy it
+    // Allocate memory for AData and copy it
     // Since Char in Free Pascal can be 1 or 2 bytes (depending on whether
     // it's an ANSI or Unicode character), using SizeOf(Char) ensures
     // the correct number of bytes are moved
     SetLength(FData, FDataSize);
-    Move(Data[0], FData[0], FDataSize * SizeOf(char));
+    Move(AData[0], FData[0], FDataSize * SizeOf(char));
 
     // Do not free thread automatically when finished.
     FreeOnTerminate := False;
@@ -86,7 +86,7 @@ type
    separate threads. It ensures each thread processes a chunk up to the
    nearest newline, without breaking a paragraph or sentence.
   }
-  procedure ReadFileInChunks(const FileName: string);
+  procedure ReadFileInChunks(const AFileName: string);
   var
     fStream: TFileStream;
     buffer: array of char;
@@ -95,12 +95,12 @@ type
     threadList: array of TFileChunkProcessor;
     activeThreads: integer;
   begin
-    fStream := TFileStream.Create(FileName, fmOpenRead);
+    fStream := TFileStream.Create(AFileName, fmOpenRead);
     try
 
       // Initialise variables for buffer, threads and threads counter.
-      SetLength(buffer, ChunkSize);
-      SetLength(threadList, MaxThreads);
+      SetLength(buffer, CHUNK_SIZE);
+      SetLength(threadList, MAX_THREADS);
       activeThreads := 0;
 
       // Read the file until the file pointer reaches the end of the file
@@ -108,7 +108,7 @@ type
       begin
         // Determine the buffer size to read and ensuring that the buffer size
         // for reading does not exceed the size of the remaining data in the file.
-        bufferSize := Min(ChunkSize, (fStream.Size - fStream.Position) div SizeOf(char));
+        bufferSize := Min(CHUNK_SIZE, (fStream.Size - fStream.Position) div SizeOf(char));
 
         // Read data into buffer
         fStream.Read(buffer[0], bufferSize);
@@ -163,9 +163,9 @@ type
         Inc(activeThreads);
 
         // If max threads are active, wait for them to finish
-        if activeThreads = MaxThreads then
+        if activeThreads = MAX_THREADS then
         begin
-          for index := 0 to MaxThreads - 1 do
+          for index := 0 to MAX_THREADS - 1 do
           begin
             threadList[index].WaitFor;
           end;
