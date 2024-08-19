@@ -4,7 +4,7 @@ uses
   Classes, SysUtils;
 
 var
-  fileName: String;
+  fileName: string;
   fileStream: TFileStream;
 
 begin
