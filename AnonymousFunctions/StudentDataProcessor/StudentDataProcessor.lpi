@@ -10,7 +10,7 @@
         <MainUnitHasScaledStatement Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="GetOptSimple"/>
+      <Title Value="StudentDataProcessor"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -21,11 +21,12 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="GetOptSimple"/>
+            <Filename Value="..\..\bin\StudentDataProcessor"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+            <OtherUnitFiles Value="lib"/>
+            <UnitOutputDirectory Value="..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
             <SyntaxOptions>
@@ -33,7 +34,6 @@
             </SyntaxOptions>
           </Parsing>
           <CodeGeneration>
-            <RelocatableUnit Value="True"/>
             <Checks>
               <IOChecks Value="True"/>
               <RangeChecks Value="True"/>
@@ -41,7 +41,6 @@
               <StackChecks Value="True"/>
             </Checks>
             <VerifyObjMethodCallValidity Value="True"/>
-            <SmallerCode Value="True"/>
           </CodeGeneration>
           <Linking>
             <Debugging>
@@ -58,7 +57,7 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="..\..\bin\GetOptSimple"/>
+            <Filename Value="..\..\bin\StudentDataProcessor"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
@@ -66,11 +65,9 @@
           </SearchPaths>
           <CodeGeneration>
             <SmartLinkUnit Value="True"/>
-            <RelocatableUnit Value="True"/>
             <Optimizations>
               <OptimizationLevel Value="3"/>
             </Optimizations>
-            <SmallerCode Value="True"/>
           </CodeGeneration>
           <Linking>
             <Debugging>
@@ -91,7 +88,7 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="GetOptSimple.lpr"/>
+        <Filename Value="StudentDataProcessor.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -100,23 +97,13 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="GetOptSimple"/>
+      <Filename Value="..\..\bin\StudentDataProcessor"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      <OtherUnitFiles Value="lib"/>
+      <UnitOutputDirectory Value="..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <CodeGeneration>
-      <SmartLinkUnit Value="True"/>
-      <RelocatableUnit Value="True"/>
-      <Optimizations>
-        <OptimizationLevel Value="3"/>
-      </Optimizations>
-      <SmallerCode Value="True"/>
-    </CodeGeneration>
-    <Linking>
-      <LinkSmart Value="True"/>
-    </Linking>
   </CompilerOptions>
   <Debugging>
     <Exceptions>

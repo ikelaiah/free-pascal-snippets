@@ -1,0 +1,7 @@
+C:\Users\iwank\Documents\fp-projects\free-pascal-snippets\Debugging\HeapMemoryLeak\HeapMemoryLeak.exe 
+Heap dump by heaptrc unit of C:\Users\iwank\Documents\fp-projects\free-pascal-snippets\Debugging\HeapMemoryLeak\HeapMemoryLeak.exe
+136 memory blocks allocated : 5380/5776
+136 memory blocks freed     : 5380/5776
+0 unfreed memory blocks : 0
+True heap size : 229376 (224 used in System startup)
+True free heap : 229152

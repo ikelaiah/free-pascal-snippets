@@ -1,4 +1,4 @@
-program HeapMemoryLeakLazarus;
+program HeapMemoryLeaks;
 
 {$mode objfpc}{$H+}{$J-}
 
@@ -37,7 +37,7 @@ begin
     // Adding items
     WriteLn('Adding items');
     WriteLn('--------------------');
-    for i := 0 to 4 do
+    for i := 0 to 3 do
       stringList.Add('Counting ' + IntToStr(i));
 
     // Printing contents
@@ -50,8 +50,4 @@ begin
     // Otherwise, Heaptrc will print heap memory reports on CLI.
     // stringList.Free;
   end;
-
-  // Pause Console
-  WriteLn('Press Enter key to quit.');
-  ReadLn;
 end.
