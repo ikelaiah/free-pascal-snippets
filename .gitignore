@@ -26,7 +26,7 @@
 backup/
 *.bak
 lib/
-bin/
+*.trc
 
 # Application bundle for Mac OS
 *.app/
@@ -73,3 +73,7 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+
+# test text files
+*.csv
+*.txt
