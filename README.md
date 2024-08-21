@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ikelaiah/free-pascal-snippets">
-    <img src="Images/logo.png" alt="Logo" width="256" height="256">
+    <img src="images/logo.png" alt="Logo" width="256" height="256">
   </a>
 
 <h3 align="center">Free Pascal Snippets</h3>
@@ -29,7 +29,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Demo Screen 1](Images/demo-01.png)
+![Demo Screen 1](images/demo-01.png)
 
 This repository contains a collection of Free Pascal code snippets (work in progress) that I put togehter while studying Object Pascal with the Lazarus IDE and the Free Pascal Compiler (FPC).
 
