@@ -15,7 +15,7 @@ var
 
 begin
   WriteLn('myNumber is ... ', myNumber); // the value will be 10
-  AddFour(myNumber);                      // call the procedure
+  AddFour(myNumber);                     // call the procedure
   WriteLn('myNumber is ... ', myNumber); // the value of myNumber will be 14
   ReadLn;
 end.

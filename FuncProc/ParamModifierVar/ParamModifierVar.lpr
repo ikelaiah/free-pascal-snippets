@@ -11,7 +11,7 @@ begin
 end;
 
 var
-  myNumber: Integer = 10;
+  myNumber: integer = 10;
 
 begin
   WriteLn('myNumber is ... ', myNumber); // the value will be 10
