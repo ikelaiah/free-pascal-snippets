@@ -21,11 +21,11 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="..\..\bin\TCSVDocumentGetSpecificCols"/>
+            <Filename Value="..\..\..\bin\TCSVDocumentGetSpecificCols"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
+            <UnitOutputDirectory Value="..\..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
             <SyntaxOptions>
@@ -56,11 +56,11 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="..\..\bin\TCSVDocumentGetSpecificCols"/>
+            <Filename Value="..\..\..\bin\TCSVDocumentGetSpecificCols"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
+            <UnitOutputDirectory Value="..\..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
             <SmartLinkUnit Value="True"/>
@@ -96,11 +96,11 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="..\..\bin\TCSVDocumentGetSpecificCols"/>
+      <Filename Value="..\..\..\bin\TCSVDocumentGetSpecificCols"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <UnitOutputDirectory Value="..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
+      <UnitOutputDirectory Value="..\..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
   </CompilerOptions>
   <Debugging>

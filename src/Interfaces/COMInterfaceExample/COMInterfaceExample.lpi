@@ -10,7 +10,7 @@
         <MainUnitHasScaledStatement Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="CalculatorExample"/>
+      <Title Value="COMInterfaceExample"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -21,12 +21,11 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="..\..\..\bin\CalculatorExample"/>
+            <Filename Value="COMInterfaceExample"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="lib"/>
-            <UnitOutputDirectory Value="..\..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
             <SyntaxOptions>
@@ -57,11 +56,10 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="..\..\..\bin\CalculatorExample"/>
+            <Filename Value="..\..\..\bin\COMInterfaceExample"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="..\..\Threading\ezthreadsPool\lib"/>
             <UnitOutputDirectory Value="..\..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -89,7 +87,7 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="CalculatorExample.lpr"/>
+        <Filename Value="COMInterfaceExample.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -98,12 +96,11 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="..\..\..\bin\CalculatorExample"/>
+      <Filename Value="COMInterfaceExample"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="lib"/>
-      <UnitOutputDirectory Value="..\..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
   </CompilerOptions>
   <Debugging>

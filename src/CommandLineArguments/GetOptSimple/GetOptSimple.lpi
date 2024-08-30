@@ -58,11 +58,11 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="..\..\bin\GetOptSimple"/>
+            <Filename Value="..\..\..\bin\GetOptSimple"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
+            <UnitOutputDirectory Value="..\..\..\bin\lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
             <SmartLinkUnit Value="True"/>
