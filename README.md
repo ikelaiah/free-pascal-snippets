@@ -41,120 +41,39 @@ It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.i
 
 ## Contents
 
-### Code Structure
-
-All about structuring Pascal source files.
-
-- **ProgramStructure**. Structure of a Pascal program.
-- **SimpleProgram**. An example of a Pascal program.
-- **UnitStructure**. Structure of a Unit file.
-- **SimpleProgramWithUnit**. An example of creating and using a unit file.
-
-### Hello World
-
-The starting point for everyone.
-
-- **HelloWorldSimple**. An example of a Hello World program.
-- **HelloWorldPause**. An example of a Hello World program and pause console at the end.
-- **HelloWorldAlt**. An example of a Hello World program with more readable directives.
-
-### Command Line Arguments
-
-All about parsing command line arguments and options.
-
-- **CLSimple**. Parsing arguments using `ParamStr` and `ParamCount`.
-- **GetOptSimple**. An example of using `GetOpt` to parse command line flags.
-
-### Date Time
-
-- **DateTimeBenchmark**. A simple way to profile your program.
-- **DateTimeBetween**. Finding time difference between two timestamps.
-- **DateTimeComparison**. Comparing date times.
-- **DateTimeCurrent**. Getting the current date time.
-- **DateTimeUnix**.  Getting date time in unix notation.
-- **ParseDate**.  A simple example of parsing a string into a `TDateTime` object using `ScanDateTime`.
-
-
-### File Handling
-
-All about file handling; reading and writing.
-
-- **ClassicNewTextFile**. Create a new text file the classical way.
-- **ClassicNewTextFileOrganised**. Create a new text file the classical way but more organised.
-- **TFileStreamNewTextFile**. Create a text file the object way.
-- **TFileStreamNewTextFileOrganised**. Create a text file the object way but more organised.
-- **ClassicCreateBlankTextFile**. The classical way of creating a blank file.
-- **TFileStreamCreateBlankTextFile**. The object way of creating a blank file.
-- **TStreamReaderReadFile**. Read a text file using `TStreamReader`.
-- **TStreadReaderReadFileTidy**. Read a text file using `TStreamReader` but more tidy.
-
-### FuncProc
-
-- **ParamModifierConst**. Ensuring function arguments won't be changed in a function or procedure.
-- **ParamModifierVar**. Moifying named parameters from a function or procedure.
-
-
-### Immutability
-
-Ensuring `const` behaving like `const` in other programing languages.
-
-### Loops
-
-- **Loops** - Examples of loops in Free Pascal.
-
-### Lists
-
-All about building lists in Free Pascal.
-
-- **StaticArray**. Building and processing static arrays.
-- **DynamicArray**. Building and processing dynamic arrays.
-- **StringList**. Create a list of string.
-- **SimpleIntegerList**. Create a list of integer using `Generics.Collections` unit and sort it.
-- **TListCustomComparison**. Crete a custom comparer for a `TList<T>` list.
-- **FGLIntegerList**. Create a list of integer using `fgl` unit and sort it.
-- **AppendFPGList**. Append two `TFPGList<integer>` lists.
-- **LGIntegerList**. Create a list of integer using `TGVector<T>` from `LGenerics` unit.
-- **LGIntegerListSort**. Sort a `TGVector<integer>` list.
-
-### Numbers
-
-All things about numbers.
-
-- **RandomNumberSimple**. Generate a random number, simplest way.
-- **RandomNumberBetween**. Generate a random integer number between two numbers.
-- **RandomRealNumberBetween**. Generate a random real number between two numbers.
-- **RandomRealNumberList**. Create a list of random number using LGenerics.
-- **RandomRealNumberListv2**. Create a list of random number using a dynamic array.
-
-
-### Directory, Paths and Filenames (DirsPathsFiles)
-
-Snippets relating to Folders, Paths and Filesnames.
-
-- **CheckDirExists** - Check if a folder exists.
-- **GetHomeDir** - Get user home dir in Free Pascal.
-- **ListAllFiles** - List files recursively using wildcards.
-
-### Regex
-
-Examples on using regex expressions.
-
-- **RegexSimpleExample**. A simple pattern matching using regex.     
-- **ReplaceDateSeparators**. An example of replacing date separators using regex.
-
-### Threading
-
-Using threads in Free Pascal.
-
-- **CreateThreads**. A simple example of creating threads using `TThread`.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Networking
-
-- **GetRequest**. A simple Get request demo. Based on [FreePascal and JSON](https://medium.com/@marcusfernstrm/freepascal-and-json-337c04cad489) by Marcus Fernström.
-- **ParseJSON**. A snippet to show how to parse JSON data. Based on [FreePascal and JSON](https://medium.com/@marcusfernstrm/freepascal-and-json-337c04cad489) by Marcus Fernström.
-- **SimpleApiWebserver**. An example ocreating a simple API webserver. Based on [Create REST API’s with FreePascal](https://medium.com/@marcusfernstrm/create-rest-apis-with-freepascal-441e4aa447b7) by Marcus Fernström.
+| Folders in src/       | Note                                                    |
+|-----------------------|---------------------------------------------------------|
+| AnonymousFunctions/   | Examples of anonymous functions.                        |
+| Arrays/               | Examples of creating arrays in Free Pascal.             |
+| Class/                | Examples of composing classes in Free Pascal.           |
+| CodeStructure/        | Examples on structuring Pascal source files.            |
+| CommandLineArguments/ | Examples on parsing command line arguments and options. |
+| ConsoleInputOutput/   | Simple examples on console IO.                          |
+| DateTime/             | Snippets about date manipulation in Free Pascal.        |
+| Debugging/            | Examples of debugging in Free Pascal.                   |
+| DirsPathsFiles/       | Examples of composing paths in Free Pascal.             |
+| FileHandling/         | Snippet on file handling; reading and writing.          |
+| FileHandling_II/      | Snippet on file handling of other file formats; CSV.    |
+| FuncProc/             | Example of creating routines in Free Pascal.            |
+| FunctionReferences/   | Snippets on Function References (requires trunk).       |
+| Generics/             | Example on using Generics.                              |
+| HelloWorld/           | The starting point for everyone.                        |
+| Immutability/         | A note on setting variables immutable.                  |
+| Interfaces/           | Examples on using Interfaces.                           |
+| LGenerics/            | Examples of using LGenerics.                            |
+| Lazarus/              | --                                                      |
+| Lists/                | Examples of building lists in Free Pascal.              |
+| Loops/                | Examples of loops in Free Pascal.                       |
+| Mormot2/              | Examples of using mormot2 in Free Pascal.               |
+| Networking/           | Examples of using networking.                           |
+| NumLib/               | Examples of using Numlib.                               |
+| Numbers/              | Examples of using numbers.                              |
+| Records/              | Examples of composing records.                          |
+| Regex/                | Examples of utilizing Regex in Free Pascal.             |
+| Strings/              | Examples of using strings.                              |
+| Subrange/             | Examples of using the subrange type.                    |
+| Threading/            | Examples of setting up threads.                         |
+| Variables/            | Examples of setting up variables in Free Pascal.        |
 
 <!-- GETTING STARTED -->
 
