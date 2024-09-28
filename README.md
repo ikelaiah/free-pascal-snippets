@@ -57,11 +57,11 @@ It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.i
 | FuncProc/             | Example of creating routines in Free Pascal.            |
 | FunctionReferences/   | Snippets on Function References (requires trunk).       |
 | Generics/             | Example on using Generics.                              |
-| HelloWorld/           | The starting point for everyone.                        |
+| HelloWorld/           | The starting point; a 'Hello World' program.            |
 | Immutability/         | A note on setting variables immutable.                  |
 | Interfaces/           | Examples on using Interfaces.                           |
 | LGenerics/            | Examples of using LGenerics.                            |
-| Lazarus/              | --                                                      |
+| Lazarus/              | A GUI of 'Hello World' in Lazarus IDE.                  |
 | Lists/                | Examples of building lists in Free Pascal.              |
 | Loops/                | Examples of loops in Free Pascal.                       |
 | Mormot2/              | Examples of using mormot2 in Free Pascal.               |
