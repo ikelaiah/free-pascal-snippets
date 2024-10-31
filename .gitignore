@@ -27,6 +27,7 @@ backup/
 *.bak
 lib/
 *.trc
+bin/
 
 # Application bundle for Mac OS
 *.app/

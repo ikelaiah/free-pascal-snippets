@@ -41,39 +41,51 @@ It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.i
 
 ## Contents
 
-| Folders in src/       | Note                                                    |
-|-----------------------|---------------------------------------------------------|
-| AnonymousFunctions/   | Examples of anonymous functions.                        |
-| Arrays/               | Examples of creating arrays in Free Pascal.             |
-| Class/                | Examples of composing classes in Free Pascal.           |
-| CodeStructure/        | Examples on structuring Pascal source files.            |
-| CommandLineArguments/ | Examples on parsing command line arguments and options. |
-| ConsoleInputOutput/   | Simple examples on console IO.                          |
-| DateTime/             | Snippets about date manipulation in Free Pascal.        |
-| Debugging/            | Examples of debugging in Free Pascal.                   |
-| DirsPathsFiles/       | Examples of composing paths in Free Pascal.             |
-| FileHandling/         | Snippet on file handling; reading and writing.          |
-| FileHandling_II/      | Snippet on file handling of other file formats; CSV.    |
-| FuncProc/             | Example of creating routines in Free Pascal.            |
-| FunctionReferences/   | Snippets on Function References (requires trunk).       |
-| Generics/             | Example on using Generics.                              |
-| HelloWorld/           | The starting point; a 'Hello World' program.            |
-| Immutability/         | A note on setting variables immutable.                  |
-| Interfaces/           | Examples on using Interfaces.                           |
-| LGenerics/            | Examples of using LGenerics.                            |
-| Lazarus/              | A GUI of 'Hello World' in Lazarus IDE.                  |
-| Lists/                | Examples of building lists in Free Pascal.              |
-| Loops/                | Examples of loops in Free Pascal.                       |
-| Mormot2/              | Examples of using mormot2 in Free Pascal.               |
-| Networking/           | Examples of using networking.                           |
-| NumLib/               | Examples of using Numlib.                               |
-| Numbers/              | Examples of using numbers.                              |
-| Records/              | Examples of composing records.                          |
-| Regex/                | Examples of utilizing Regex in Free Pascal.             |
-| Strings/              | Examples of using strings.                              |
-| Subrange/             | Examples of using the subrange type.                    |
-| Threading/            | Examples of setting up threads.                         |
-| Variables/            | Examples of setting up variables in Free Pascal.        |
+The source code is organized into the following categories:
+
+### Basic Concepts
+- **HelloWorld/** - The starting point; a 'Hello World' program
+- **Variables/** - Examples of setting up variables in Free Pascal
+- **Numbers/** - Examples of using numbers
+- **Strings/** - Examples of using strings
+- **Arrays/** - Examples of creating arrays
+- **Lists/** - Examples of building lists
+- **Loops/** - Examples of loops
+- **FuncProc/** - Example of creating routines (functions and procedures)
+
+### Intermediate Features
+- **Class/** - Examples of composing classes
+- **Records/** - Examples of composing records
+- **Interfaces/** - Examples on using Interfaces
+- **Generics/** - Example on using Generics
+- **AnonymousFunctions/** - Examples of anonymous functions
+- **FunctionReferences/** - Snippets on Function References (requires trunk)
+- **Threading/** - Examples of setting up threads
+- **Immutability/** - A note on setting variables immutable
+- **Subrange/** - Examples of using the subrange type
+
+### File & I/O Operations
+- **ConsoleInputOutput/** - Simple examples on console IO
+- **CommandLineArguments/** - Examples on parsing command line arguments and options
+- **DirsPathsFiles/** - Examples of composing paths
+- **FileHandling/** - Snippet on file handling; reading and writing
+- **FileHandling_II/** - Snippet on file handling of other file formats; CSV
+
+### Advanced Topics
+- **DateTime/** - Snippets about date manipulation
+- **Debugging/** - Examples of debugging
+- **Regex/** - Examples of utilizing Regex
+- **Networking/** - Examples of using networking
+- **CodeStructure/** - Examples on structuring Pascal source files
+
+### Libraries & Frameworks
+- **LGenerics/** - Examples of using LGenerics
+- **Mormot2/** - Examples of using mormot2
+- **NumLib/** - Examples of using Numlib
+- **Lazarus/** - A GUI of 'Hello World' in Lazarus IDE
+
+### Compilation Output
+When you compile any project, the executable output will be placed in the top-level `bin/` folder of the repository. This keeps the compiled binaries separate from the source code and makes it easier to manage multiple examples.
 
 <!-- GETTING STARTED -->
 
@@ -81,9 +93,8 @@ It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.i
 
 ### Prerequisites
 
-Install both the [Free Pascal Compiler (FPC)](https://www.freepascal.org) and [Lazarus IDE](https://www.lazarus-ide.org). Use [`fpcupdeluxe`](https://github.com/LongDirtyAnimAlf/fpcupdeluxe).
-
-You can find the latest installer here; [https://github.com/LongDirtyAnimAlf/fpcupdeluxe/releases](https://github.com/LongDirtyAnimAlf/fpcupdeluxe/releases).
+1. Interest in Object Pascal.
+2. Install both the [Free Pascal Compiler (FPC)](https://www.freepascal.org) and [Lazarus IDE](https://www.lazarus-ide.org). You can use the [Lazarus IDE installer](https://www.lazarus-ide.org/index.php?page=downloads) or [`fpcupdeluxe`](https://github.com/LongDirtyAnimAlf/fpcupdeluxe/releases) to install both.
 
 
 ### Installation
