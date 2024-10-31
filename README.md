@@ -33,7 +33,7 @@
 
 This repository contains a collection of Free Pascal code snippets (work in progress) that I put togehter while studying Object Pascal with the Lazarus IDE and the Free Pascal Compiler (FPC).
 
-It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.io/free-pascal-and-lazarus-cookbook) project.
+It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.io/free-pascal-cookbook) project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
