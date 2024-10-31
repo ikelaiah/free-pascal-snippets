@@ -84,8 +84,11 @@ The source code is organized into the following categories:
 - **NumLib/** - Examples of using Numlib
 - **Lazarus/** - A GUI of 'Hello World' in Lazarus IDE
 
-### Compilation Output
-When you compile any project, the executable output will be placed in the top-level `bin/` folder of the repository. This keeps the compiled binaries separate from the source code and makes it easier to manage multiple examples.
+## Compilation Output
+
+When you compile any project, the executable output will be placed in the top-level `bin/` folder of the repository. 
+
+**Why?** This keeps the compiled binaries separate from the source code and makes it easier for me to manage multiple examples.
 
 <!-- GETTING STARTED -->
 
@@ -126,7 +129,10 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Iwan Kelaiah - iwan.kelaiah@gmail.com
+Find me at these places:
+
+- [@ikelaiah](https://github.com/ikelaiah) on GitHub 
+- the [Unofficial Free Pascal & Lazarus discord server](https://discord.com/channels/570025060312547359/570091337173696513).
 
 Project Link: [https://github.com/ikelaiah/free-pascal-snippets](https://github.com/ikelaiah/free-pascal-snippets)
 
