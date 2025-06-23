@@ -26,6 +26,14 @@ begin
 
   WriteLn('--------------------');
 
+  // 1c. For Loop with downto -------------------
+  for i := 10 downto 1 do
+  begin
+    WriteLn('For Loop with downto: Value of i is ', i);
+  end;
+
+  WriteLn('--------------------');
+
   //2a. For-In Loop -----------------------------
   for i in intArray do
   begin

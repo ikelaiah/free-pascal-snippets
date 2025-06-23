@@ -20,6 +20,9 @@ program LargeTextFileParser;
 {$mode objfpc}{$H+}{$J-}
 
 uses
+  {$IFDEF UNIX}
+  cmem, cthreads,
+  {$ENDIF}
   Classes,
   SysUtils,
   Math;
