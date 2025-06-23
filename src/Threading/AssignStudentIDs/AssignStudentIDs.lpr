@@ -79,8 +79,7 @@ program AssignStudentIDs;
 
 uses
   {$IFDEF UNIX}
-  cmem
-  , cthreads
+  cmem, cthreads,
   {$ENDIF}
   Classes,
   SysUtils,

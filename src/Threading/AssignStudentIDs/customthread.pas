@@ -5,6 +5,9 @@ unit CustomThread;
 interface
 
 uses
+  {$IFDEF UNIX}
+  cmem, cthreads,
+  {$ENDIF}
   Classes, SysUtils, Common;
 
   // Create a thread class deriving from TThread.

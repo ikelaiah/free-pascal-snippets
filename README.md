@@ -1,4 +1,24 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+# Free Pascal Snippets
+
+<p align="center">
+  <a href="https://github.com/ikelaiah/free-pascal-snippets/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/ikelaiah/free-pascal-snippets?color=blue" alt="License">
+  </a>
+  <a href="https://github.com/ikelaiah/free-pascal-snippets/stargazers">
+    <img src="https://img.shields.io/github/stars/ikelaiah/free-pascal-snippets?style=social" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/ikelaiah/free-pascal-snippets/network/members">
+    <img src="https://img.shields.io/github/forks/ikelaiah/free-pascal-snippets?style=social" alt="GitHub forks">
+  </a>
+  <a href="https://github.com/ikelaiah/free-pascal-snippets/issues">
+    <img src="https://img.shields.io/github/issues/ikelaiah/free-pascal-snippets" alt="GitHub issues">
+  </a>
+  <a href="https://github.com/ikelaiah/free-pascal-snippets/commits/main">
+    <img src="https://img.shields.io/github/last-commit/ikelaiah/free-pascal-snippets" alt="Last commit">
+  </a>
+  <img src="https://img.shields.io/badge/FPC-3.2.2-blue.svg" alt="FPC Version">
+</p>
+
 <a name="readme-top"></a>
 
 
@@ -41,48 +61,216 @@ It is a part of the [Free Pascal and Lazarus Cookbook](https://ikelaiah.github.i
 
 ## Contents
 
-The source code is organized into the following categories:
+The source code is organized into the following categories and example subfolders:
 
 ### Basic Concepts
-- **HelloWorld/** - The starting point; a 'Hello World' program
-- **Variables/** - Examples of setting up variables in Free Pascal
-- **Numbers/** - Examples of using numbers
-- **Strings/** - Examples of using strings
-- **Arrays/** - Examples of creating arrays
-- **Lists/** - Examples of building lists
-- **Loops/** - Examples of loops
-- **FuncProc/** - Example of creating routines (functions and procedures)
+
+- **HelloWorld/**
+  - HelloWorldAlt/
+  - HelloWorldPause/
+  - HelloWorldSimple/
+- **Variables/**
+  - BasicVariableTypes/
+  - VariableAssignment/
+- **Numbers/**
+  - BasicMathOperations/
+  - FormatCurrency/
+  - FormatNumberCommas/
+  - NDecimalRoundingBanker/
+  - NDecimalsRoundingExamples/
+  - RandomNumberBetween/
+  - RandomNumberSimple/
+  - RandomRealNumberBetween/
+  - RandomRealNumberList/
+  - RandomRealNumberListv2/
+  - RoundingExamples/
+- **Strings/**
+  - StringOperationsExample/
+  - TrailingCommas/
+- **Arrays/**
+  - DynArrayConcat/
+  - DynArrayDemo01/
+  - DynArrayDemo02/
+  - StaticArrayDemo/
+  - StaticArrayDemo02/
+- **Lists/**
+  - AppendFGLList/
+  - DynamicArray/
+  - FGLIntegerList/
+  - LGIntegerList/
+  - LGIntegerListSort/
+  - SimpleIntegerList/
+  - StaticArray/
+  - StringList/
+  - TListCustomComparison/
+- **Loops/**
+  - ForInLoop/
+  - Loops.lpi
+  - Loops.lpr
+- **FuncProc/**
+  - ExampleFunctionWithoutParams/
+  - ExampleFunctionWithParams/
+  - ExampleFunctionWithVarSection/
+  - ExampleProcedureWithoutParams/
+  - ExampleProcedureWithParams/
+  - ExampleProcedureWithVarSection/
+  - ParamModifierConst/
+  - ParamModifierVar/
 
 ### Intermediate Features
-- **Class/** - Examples of composing classes
-- **Records/** - Examples of composing records
-- **Interfaces/** - Examples on using Interfaces
-- **Generics/** - Example on using Generics
-- **AnonymousFunctions/** - Examples of anonymous functions
-- **FunctionReferences/** - Snippets on Function References (requires trunk)
-- **Threading/** - Examples of setting up threads
-- **Immutability/** - A note on setting variables immutable
-- **Subrange/** - Examples of using the subrange type
+
+- **Class/**
+  - ClassExample/
+- **Records/**
+  - AdvancedRecordExample/
+- **Interfaces/**
+  - COMInterfaceExample/
+- **Generics/**
+  - GenericClassExample/
+  - GenericFunctionExample/
+  - GenericRecordExample/
+- **AnonymousFunctions/**
+  - AnonymousFuncGradeCalculator/
+  - AnonymousFuncSimple/
+  - StudentDataProcessor/
+- **FunctionReferences/**
+  - CalculatorExample/
+  - FuncRefDigitalCircuitSimulator/
+  - FuncRefSimple/
+- **Threading/**
+  - AssignStudentIDs/
+  - CreateThreads/
+  - CreateThreadsCriticalSection/
+  - CriticalSectionIncrementCounter/
+  - EX1SingleThread/
+  - EX2MultiThread/
+  - EX3MultiThread/
+  - ezthreadsDependency/
+  - ezthreadsPool/
+  - ezthreadsSimple/
+  - LargeTextFileParser/
+- **Immutability**
+  - Immutability.lpi
+  - Immutability.lpr
+- **Subrange**
+  - SubrangeDaysofWeek/
 
 ### File & I/O Operations
-- **ConsoleInputOutput/** - Simple examples on console IO
-- **CommandLineArguments/** - Examples on parsing command line arguments and options
-- **DirsPathsFiles/** - Examples of composing paths
-- **FileHandling/** - Snippet on file handling; reading and writing
-- **FileHandling_II/** - Snippet on file handling of other file formats; CSV
+
+- **ConsoleInputOutput/**
+  - ConsoleIO/
+  - ReadExample/
+  - WriteExample/
+- **CommandLineArguments/**
+  - CLSimple/
+  - GetOptSimple/
+- **DirsPathsFiles/**
+  - CheckDirExists/
+  - CollectFilePaths/
+  - FindFirstSearch/
+  - FindFirstSearchRecursive/
+  - FindFirstSearchRegex/
+  - FindFirstSearchRegexStoreInArray/
+  - FindFirstSearchStoreInArray/
+  - GetHomeDir/
+  - ListAllFiles/
+- **FileHandling/**
+  - BasicReadTextFileClassic/
+  - BasicWriteTextFile/
+  - ClassicAppendTextFile/
+  - ClassicCountLine/
+  - ClassicCreateBlankTextFile/
+  - ClassicNewTextFile/
+  - ClassicNewTextFileOrganised/
+  - ClassicReadTextFile/
+  - SimpleReadTextFile/
+  - SimpleWriteText/
+  - TBufferedFIleStreamCount/
+  - TBufferedFileStreamReadFile/
+  - TFileStreamAppendTextFile/
+  - TFileStreamCreateBlankTextFile/
+  - TFileStreamNewTextFile/
+  - TFileStreamNewTextFileOrganised/
+  - TFileStreamSplitFile/
+  - TStreadReaderReadFileTidy/
+  - TStreamReaderCount/
+  - TStreamReaderReadFile/
+  - TStringListAppend/
+  - TStringListBlankFile/
+  - TStringListNewTextFile/
+  - TStringListReadTextFile/
+- **FileHandling_II/**
+  - TCSVDatasetGetSpecificCols/
+  - TCSVDocumentGetSpecificCols/
 
 ### Advanced Topics
-- **DateTime/** - Snippets about date manipulation
-- **Debugging/** - Examples of debugging
-- **Regex/** - Examples of utilizing Regex
-- **Networking/** - Examples of using networking
-- **CodeStructure/** - Examples on structuring Pascal source files
+
+- **DateTime/**
+  - DateTimeBenchmark/
+  - DateTimeBetween/
+  - DateTimeComparison/
+  - DateTimeCurrent/
+  - DateTimeUnix/
+  - ParseDate/
+- **Debugging/**
+  - HeapMemoryLeaks/
+- **Regex/**
+  - MatchingFilename/
+  - MatchingFilenameAlt/
+  - RegexExample/
+  - ReplaceDateSeparators/
+- **Networking/**
+  - ParseJSON/
+  - SimpleApiWebserver/
+- **CodeStructure/**
+  - ProgramStructure/
+  - SimpleProgram/
+  - SimpleProgramWithUnit/
+  - UnitStructure/
+- **ZipUnzip/**
+  - UnzipEx01/
+  - UnzipFile/
+  - ZipEx01/
+  - ZipEx02/
+  - ZipEx03/
+  - ZipFiles/
 
 ### Libraries & Frameworks
-- **LGenerics/** - Examples of using LGenerics
-- **Mormot2/** - Examples of using mormot2
-- **NumLib/** - Examples of using Numlib
-- **Lazarus/** - A GUI of 'Hello World' in Lazarus IDE
+
+- **LGenerics/**
+  - GHashmapLP/
+- **Mormot2/**
+  - Collections/
+  - CollectionsV2/
+  - MormotKeyValueDemo/
+- **NumLib/**
+  - eig_general_matrix/
+  - eig_symband_matrix/
+  - eig_symtridiag_matrix/
+  - InnerProductVectors/
+  - integrate/
+  - inverse_matrix/
+  - matrix_example/
+  - omvinp_demo/
+  - omvmmv_demo/
+  - omvtrm_demo/
+  - omv_norm_demo/
+  - polynomial_fit/
+  - solve_band/
+  - solve_leastsquares/
+  - solve_linear_eq/
+  - solve_ode/
+  - solve_ode_sys/
+  - solve_root_binomial/
+  - solve_root_bisection/
+  - solve_root_nonlinear/
+  - solve_root_polynomials/
+  - solve_root_quadratic/
+  - solve_spd/
+  - solve_tridiag_matrix/
+  - spline_interpolation/
+- **Lazarus/**
+  - HelloWorld/
 
 ## Compilation Output
 
