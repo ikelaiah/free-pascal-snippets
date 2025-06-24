@@ -128,7 +128,7 @@ The source code is organized into the following categories and example subfolder
   - GenericClassExample/
   - GenericFunctionExample/
   - GenericRecordExample/
-- **AnonymousFunctions/** (requires FPC trunk)
+- **AnonymousFunctions/**  (⚠️requires FPC trunk)
   - AnonymousFuncGradeCalculator/
   - AnonymousFuncSimple/
   - StudentDataProcessor/
