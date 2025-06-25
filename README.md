@@ -40,7 +40,7 @@
     <br/>
     <a href="#contents">Explore Contents</a>
     ·
-     <a href="https://ikelaiah.github.io/free-pascal-cookbook">Read Free Pascal and Lazarus Cookbook</a>
+     <a href="https://ikelaiah.github.io/free-pascal-cookbook">Read Free Pascal Cookbook</a>
     ·
     <a href="https://github.com/ikelaiah/free-pascal-cookbook">View Cookbook repo</a>
   </p>
@@ -105,8 +105,7 @@ The source code is organized into the following categories and example subfolder
   - TListCustomComparison/
 - **Loops/**
   - ForInLoop/
-  - Loops.lpi
-  - Loops.lpr
+  - Loops/
 - **FuncProc/**
   - ExampleFunctionWithoutParams/
   - ExampleFunctionWithParams/
@@ -129,7 +128,7 @@ The source code is organized into the following categories and example subfolder
   - GenericClassExample/
   - GenericFunctionExample/
   - GenericRecordExample/
-- **AnonymousFunctions/**
+- **AnonymousFunctions/**  (⚠️requires FPC trunk)
   - AnonymousFuncGradeCalculator/
   - AnonymousFuncSimple/
   - StudentDataProcessor/
@@ -137,7 +136,7 @@ The source code is organized into the following categories and example subfolder
   - CalculatorExample/
   - FuncRefDigitalCircuitSimulator/
   - FuncRefSimple/
-- **Threading/**
+- **Threading**
   - AssignStudentIDs/
   - CreateThreads/
   - CreateThreadsCriticalSection/
@@ -150,8 +149,7 @@ The source code is organized into the following categories and example subfolder
   - ezthreadsSimple/
   - LargeTextFileParser/
 - **Immutability**
-  - Immutability.lpi
-  - Immutability.lpr
+  - Immutability/
 - **Subrange**
   - SubrangeDaysofWeek/
 
@@ -220,6 +218,7 @@ The source code is organized into the following categories and example subfolder
   - RegexExample/
   - ReplaceDateSeparators/
 - **Networking/**
+  - GetRequest/
   - ParseJSON/
   - SimpleApiWebserver/
 - **CodeStructure/**
@@ -291,6 +290,32 @@ When you compile any project, the executable output will be placed in the top-le
 ### Installation
 
 None. Just download or `git clone` the repo to your local drive.
+
+### Build and Clean All Projects
+
+To build or clean all Lazarus projects in this repository, use the provided scripts from the repo root:
+
+#### Windows (PowerShell)
+- **Build all projects:**
+  ```powershell
+  ./build-all.ps1
+  ```
+- **Clean all build output:**
+  ```powershell
+  ./clean-all.ps1
+  ```
+
+#### Linux/macOS (Bash)
+- **Build all projects:**
+  ```bash
+  ./build-all.sh
+  ```
+- **Clean all build output:**
+  ```bash
+  ./clean-all.sh
+  ```
+
+> The scripts will check if `lazbuild` is available and show a clear error message with emojis if not. Cleaning scripts will remove all common build artifacts and the `bin/` folder.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
