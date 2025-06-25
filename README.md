@@ -40,7 +40,7 @@
     <br/>
     <a href="#contents">Explore Contents</a>
     ·
-     <a href="https://ikelaiah.github.io/free-pascal-cookbook">Read Free Pascal and Lazarus Cookbook</a>
+     <a href="https://ikelaiah.github.io/free-pascal-cookbook">Read Free Pascal Cookbook</a>
     ·
     <a href="https://github.com/ikelaiah/free-pascal-cookbook">View Cookbook repo</a>
   </p>
